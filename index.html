@@ -3,46 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estancia de Campo | Reservas</title>
+  <meta name="description" content="Viví una experiencia de campo con día de campo, parrilla libre, menú destacado y paseo en globo. Reservas simples y claras por WhatsApp." />
 
-  <title>Chacra De Monte | Día de campo y reservas por WhatsApp</title>
-  <meta name="description" content="Viví una experiencia única en Chacra De Monte: restaurante de campo, día al aire libre y globo aerostático. Reservá tu visita por WhatsApp." />
-  <meta name="keywords" content="chacra de monte, día de campo, globo aerostático, restaurante de campo, reservas por whatsapp, san miguel del monte" />
-  <meta name="author" content="Ciborg 347" />
-
+  <meta property="og:title" content="Estancia de Campo | Reservas" />
+  <meta property="og:description" content="Día de campo, parrilla libre, menú destacado y experiencia en globo. Reservá tu lugar de forma simple." />
+  <meta property="og:image" content="https://iili.io/qVcG5JV.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Chacra De Monte | Día de campo y reservas por WhatsApp" />
-  <meta property="og:description" content="Restaurante de campo + globo aerostático en San Miguel del Monte. Reservá tu experiencia por WhatsApp." />
-  <meta property="og:image" content="https://iili.io/qVl4Lxe.jpg" />
   <meta property="og:locale" content="es_AR" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Chacra De Monte | Día de campo y reservas por WhatsApp" />
-  <meta name="twitter:description" content="Restaurante de campo + globo aerostático en San Miguel del Monte. Reservá tu experiencia por WhatsApp." />
-  <meta name="twitter:image" content="https://iili.io/qVl4Lxe.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg:#f6efe6;
-      --bg-soft:#fbf6ef;
-      --card:#fffaf3;
-      --card-2:#fff7ee;
-      --line:rgba(72,50,30,.12);
-      --text:#2f241c;
-      --muted:#6e5a49;
-      --brown:#7c4f2a;
-      --brown-2:#9b6538;
-      --gold:#c4913c;
-      --olive:#6a7456;
-      --shadow:0 18px 50px rgba(67,43,22,.10);
+      --bg:#f6f0e6;
+      --bg-soft:#efe6d7;
+      --paper:rgba(255,255,255,.72);
+      --paper-strong:rgba(255,255,255,.84);
+      --text:#2f251d;
+      --muted:#6d5a4c;
+      --line:rgba(66,47,34,.12);
+      --brand:#6e4d34;
+      --brand-2:#8a6a4f;
+      --accent:#c58f4d;
+      --accent-soft:#e6c59a;
+      --shadow:0 18px 45px rgba(55,35,20,.12);
       --radius-xl:28px;
       --radius-lg:22px;
       --radius-md:18px;
-      --max:1200px;
-      --wa-size:62px;
+      --max:1180px;
       --header-h:84px;
     }
 
@@ -50,108 +37,67 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:"Inter",sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(196,145,60,.08), transparent 28%),
-        radial-gradient(circle at top right, rgba(106,116,86,.09), transparent 24%),
-        linear-gradient(180deg,#f7f1ea 0%, #f4ede3 100%);
+      font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
+      background:
+        linear-gradient(rgba(246,240,230,.72), rgba(246,240,230,.72)),
+        url("https://iili.io/qWORwFa.jpg") center center / cover fixed no-repeat;
       overflow-x:hidden;
     }
 
-    img{display:block;max-width:100%}
+    img{max-width:100%;display:block}
     a{text-decoration:none;color:inherit}
+    button,input,textarea,select{font:inherit}
 
     .container{
-      width:min(calc(100% - 28px), var(--max));
-      margin-inline:auto;
+      width:min(calc(100% - 32px), var(--max));
+      margin:0 auto;
     }
 
     .section{
-      padding:88px 0;
+      padding:72px 0;
+      position:relative;
     }
 
     .section-title{
+      font-size:clamp(28px,4vw,46px);
+      line-height:1.06;
       margin:0 0 14px;
-      font-family:"Playfair Display",serif;
-      font-size:clamp(2rem, 4vw, 3.5rem);
-      line-height:1.05;
-      letter-spacing:-0.03em;
+      letter-spacing:-.02em;
     }
 
-    .section-subtitle{
-      max-width:760px;
+    .section-sub{
       margin:0;
       color:var(--muted);
       font-size:1.04rem;
       line-height:1.7;
+      max-width:720px;
     }
 
     .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 16px;
+      display:inline-block;
+      margin-bottom:14px;
+      padding:8px 14px;
+      border:1px solid rgba(110,77,52,.14);
       border-radius:999px;
-      background:rgba(196,145,60,.10);
-      border:1px solid rgba(196,145,60,.16);
-      color:var(--brown);
-      font-weight:700;
-      font-size:.84rem;
+      background:rgba(255,255,255,.46);
+      color:var(--brand);
+      font-size:.86rem;
       letter-spacing:.08em;
       text-transform:uppercase;
-      margin-bottom:18px;
+      backdrop-filter:blur(6px);
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      min-height:54px;
-      padding:0 22px;
-      border-radius:999px;
-      border:none;
-      font-weight:700;
-      font-size:1rem;
-      cursor:pointer;
-      transition:.22s ease;
-      box-shadow:var(--shadow);
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg, #25d366 0%, #1fb657 100%);
-      color:#fff;
-    }
-
-    .btn-secondary{
-      background:#fff;
-      color:var(--text);
-      border:1px solid var(--line);
-      box-shadow:none;
-    }
-
-    .btn-outline{
-      background:transparent;
-      border:1px solid rgba(124,79,42,.18);
-      color:var(--brown);
-      box-shadow:none;
-    }
-
-    .site-header{
+    header{
       position:sticky;
       top:0;
-      z-index:50;
-      backdrop-filter:blur(16px);
-      background:rgba(250,244,236,.78);
-      border-bottom:1px solid rgba(72,50,30,.08);
+      z-index:90;
+      backdrop-filter:blur(12px);
+      background:rgba(246,240,230,.62);
+      border-bottom:1px solid rgba(66,47,34,.08);
     }
 
-    .header-inner{
+    .nav{
       min-height:var(--header-h);
       display:flex;
       align-items:center;
@@ -162,891 +108,1066 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:12px;
       min-width:0;
     }
 
-    .brand-logo{
-      width:64px;
-      height:64px;
-      border-radius:18px;
-      background:#fff;
-      border:1px solid rgba(72,50,30,.08);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-      box-shadow:0 10px 28px rgba(77,54,30,.08);
-      flex:0 0 auto;
-      padding:8px;
-    }
-
-    .brand-logo img{
-      width:100%;
-      height:100%;
+    .brand img{
+      width:60px;
+      height:60px;
       object-fit:contain;
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,.10));
+      flex:0 0 auto;
     }
 
     .brand-text{
+      display:flex;
+      flex-direction:column;
       min-width:0;
     }
 
-    .brand-text strong{
-      display:block;
+    .brand-title{
       font-size:1rem;
+      font-weight:700;
+      letter-spacing:.03em;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
     }
 
-    .brand-text span{
-      display:block;
+    .brand-sub{
+      font-size:.84rem;
       color:var(--muted);
-      font-size:.92rem;
-      margin-top:2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
     }
 
-    .nav{
+    .nav-links{
       display:flex;
       align-items:center;
       gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
     }
 
-    .nav a{
+    .nav-links a{
       padding:10px 14px;
       border-radius:999px;
       color:var(--muted);
-      font-weight:600;
-      transition:.2s ease;
+      transition:.22s ease;
+      font-size:.96rem;
     }
 
-    .nav a:hover{
-      background:rgba(124,79,42,.06);
+    .nav-links a:hover{
+      background:rgba(255,255,255,.55);
       color:var(--text);
     }
 
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:48px;
+      padding:0 22px;
+      border:none;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 12px 26px rgba(110,77,52,.22);
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      cursor:pointer;
+    }
+
+    .cta:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(110,77,52,.28);
+    }
+
+    .cta.secondary{
+      background:rgba(255,255,255,.68);
+      color:var(--text);
+      border:1px solid rgba(66,47,34,.10);
+      box-shadow:none;
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .menu-btn{
+      display:none;
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      border:1px solid rgba(66,47,34,.10);
+      background:rgba(255,255,255,.7);
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      box-shadow:none;
+    }
+
+    .menu-btn span,
+    .menu-btn::before,
+    .menu-btn::after{
+      content:"";
+      display:block;
+      width:22px;
+      height:2px;
+      background:var(--text);
+      border-radius:999px;
+      transition:.22s ease;
+      position:relative;
+    }
+
+    .menu-btn::before{ position:absolute; transform:translateY(-7px); }
+    .menu-btn::after{ position:absolute; transform:translateY(7px); }
+
+    .mobile-menu{
+      display:none;
+      padding:0 0 18px;
+    }
+
+    .mobile-panel{
+      margin-top:6px;
+      border-radius:22px;
+      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,255,255,.78);
+      backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .mobile-panel a{
+      display:block;
+      padding:16px 18px;
+      border-bottom:1px solid rgba(66,47,34,.06);
+      color:var(--muted);
+    }
+
+    .mobile-panel a:last-child{border-bottom:none}
+    .mobile-panel .mobile-cta-wrap{
+      padding:16px;
+    }
+
     .hero{
-      padding:42px 0 72px;
+      padding:46px 0 42px;
     }
 
     .hero-grid{
       display:grid;
       grid-template-columns:1.05fr .95fr;
-      gap:28px;
       align-items:center;
+      gap:34px;
+      min-height:calc(100vh - var(--header-h) - 30px);
     }
 
     .hero-copy{
-      background:linear-gradient(180deg, rgba(255,250,243,.92), rgba(255,248,238,.84));
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:var(--radius-xl);
+      background:rgba(255,248,239,.52);
+      border:1px solid rgba(66,47,34,.08);
+      border-radius:32px;
+      padding:34px;
       box-shadow:var(--shadow);
-      padding:clamp(26px,4vw,42px);
+      backdrop-filter:blur(10px);
+      max-width:640px;
     }
 
-    .hero-title{
-      margin:0 0 18px;
-      font-family:"Playfair Display",serif;
-      font-size:clamp(2.8rem, 6vw, 5.2rem);
-      line-height:.96;
-      letter-spacing:-.045em;
+    .hero-copy h1{
+      margin:0 0 16px;
+      font-size:clamp(38px,6vw,68px);
+      line-height:.98;
+      letter-spacing:-.04em;
     }
 
-    .hero-text{
-      margin:0 0 24px;
+    .hero-copy p{
+      margin:0 0 26px;
       color:var(--muted);
-      font-size:1.07rem;
+      font-size:1.06rem;
       line-height:1.8;
-      max-width:58ch;
+      max-width:560px;
     }
 
     .hero-actions{
       display:flex;
-      gap:14px;
       flex-wrap:wrap;
-      margin-bottom:26px;
-    }
-
-    .hero-points{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:12px;
+      margin-bottom:22px;
     }
 
-    .point{
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:18px;
-      padding:16px;
+    .hero-bullets{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
     }
 
-    .point strong{
-      display:block;
-      font-size:.98rem;
-      margin-bottom:6px;
+    .hero-bullets span{
+      display:inline-flex;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.62);
+      border:1px solid rgba(66,47,34,.08);
+      color:var(--text);
+      font-size:.94rem;
     }
 
-    .point span{
-      display:block;
-      color:var(--muted);
-      font-size:.92rem;
-      line-height:1.45;
-    }
-
-    .hero-visual{
+    .hero-media{
       position:relative;
       min-width:0;
     }
 
-    .hero-main-card{
-      background:linear-gradient(180deg, rgba(255,250,243,.96), rgba(255,246,236,.88));
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:34px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      padding:14px;
-    }
-
-    .hero-main-media{
+    .hero-image-wrap{
       position:relative;
-      border-radius:26px;
+      border-radius:34px;
       overflow:hidden;
-      background:#efe3d1;
+      box-shadow:0 26px 60px rgba(45,30,20,.20);
       min-height:620px;
+      background:#d8c7b2;
     }
 
-    .hero-main-media img{
+    .hero-image-wrap img{
       width:100%;
       height:100%;
       object-fit:cover;
+      object-position:center center;
     }
 
-    .hero-badge{
+    .floating-note{
       position:absolute;
-      left:18px;
-      right:18px;
-      bottom:18px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
+      left:20px;
+      bottom:20px;
+      max-width:260px;
       padding:16px 18px;
       border-radius:20px;
-      background:rgba(255,248,238,.86);
+      background:rgba(255,250,244,.78);
       backdrop-filter:blur(10px);
-      border:1px solid rgba(72,50,30,.08);
-      box-shadow:0 16px 40px rgba(55,33,12,.10);
-    }
-
-    .hero-badge strong{
-      display:block;
-      font-size:1rem;
-      margin-bottom:4px;
-    }
-
-    .hero-badge span{
-      color:var(--muted);
-      font-size:.93rem;
-    }
-
-    .mini-cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
-      margin-top:16px;
-    }
-
-    .mini-card{
-      background:rgba(255,250,243,.92);
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:20px;
-      overflow:hidden;
+      border:1px solid rgba(66,47,34,.08);
       box-shadow:var(--shadow);
     }
 
-    .mini-card .media{
-      height:150px;
-      background:#efe4d3;
-      padding:10px;
-    }
-
-    .mini-card .media img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      border-radius:14px;
-    }
-
-    .mini-card .text{
-      padding:14px 14px 16px;
-    }
-
-    .mini-card strong{
-      display:block;
-      font-size:.95rem;
-      margin-bottom:4px;
-    }
-
-    .mini-card span{
-      color:var(--muted);
-      font-size:.88rem;
-      line-height:1.45;
-    }
-
-    .about-grid{
-      display:grid;
-      grid-template-columns:.95fr 1.05fr;
-      gap:28px;
-      align-items:center;
-    }
-
-    .about-card,
-    .info-card,
-    .cta-panel{
-      background:linear-gradient(180deg, rgba(255,250,243,.92), rgba(255,247,238,.88));
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:var(--radius-xl);
-      box-shadow:var(--shadow);
-    }
-
-    .about-card{
-      padding:16px;
-    }
-
-    .about-media{
-      background:#efe4d4;
-      border-radius:24px;
-      overflow:hidden;
-      min-height:520px;
-    }
-
-    .about-media img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .about-copy{
-      padding:12px 0;
-    }
-
-    .about-copy p{
-      color:var(--muted);
-      font-size:1.04rem;
-      line-height:1.8;
-      margin:0 0 16px;
-    }
-
-    .about-list{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      margin-top:24px;
-    }
-
-    .about-list .item{
-      padding:18px;
-      border-radius:20px;
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(72,50,30,.08);
-    }
-
-    .about-list strong{
+    .floating-note strong{
       display:block;
       margin-bottom:6px;
       font-size:1rem;
     }
 
-    .about-list span{
-      display:block;
-      color:var(--muted);
-      font-size:.92rem;
-      line-height:1.5;
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:20px;
-      margin-top:34px;
-    }
-
-    .service-card{
-      background:linear-gradient(180deg, rgba(255,250,243,.95), rgba(255,247,238,.90));
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:26px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-    }
-
-    .service-card.featured{
-      grid-column:span 3;
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      align-items:stretch;
-    }
-
-    .service-media{
-      background:#efe4d3;
-      padding:14px;
-    }
-
-    .service-card:not(.featured) .service-media{
-      height:290px;
-    }
-
-    .service-media img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      border-radius:20px;
-    }
-
-    .service-content{
-      padding:24px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .service-kicker{
-      color:var(--brown);
-      font-size:.84rem;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      margin-bottom:12px;
-    }
-
-    .service-title{
-      margin:0 0 12px;
-      font-family:"Playfair Display",serif;
-      font-size:clamp(1.55rem,2vw,2.25rem);
-      line-height:1.05;
-      letter-spacing:-.03em;
-    }
-
-    .service-text{
-      margin:0;
-      color:var(--muted);
-      line-height:1.75;
-      font-size:1rem;
-    }
-
-    .gallery-section-head{
-      display:flex;
-      align-items:end;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-      margin-bottom:24px;
-    }
-
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:18px;
-    }
-
-    .gallery-item{
-      background:linear-gradient(180deg, rgba(255,250,243,.94), rgba(255,247,238,.88));
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:22px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-    }
-
-    .gallery-item .media{
-      height:250px;
-      background:#efe4d3;
-      padding:12px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .gallery-item img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      border-radius:16px;
-    }
-
-    .gallery-item .caption{
-      padding:14px 16px 18px;
+    .floating-note span{
       color:var(--muted);
       font-size:.94rem;
       line-height:1.55;
     }
 
-    .info-grid{
+    .intro-strip{
+      padding-top:0;
+    }
+
+    .intro-wrap{
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:20px;
-      margin-top:30px;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:18px;
     }
 
-    .info-card{
+    .soft-card{
+      background:var(--paper);
+      border:1px solid rgba(66,47,34,.08);
+      border-radius:24px;
       padding:24px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
     }
 
-    .info-card strong{
-      display:block;
-      font-size:1.02rem;
-      margin-bottom:8px;
+    .soft-card h3{
+      margin:0 0 10px;
+      font-size:1.18rem;
     }
 
-    .info-card p{
+    .soft-card p{
       margin:0;
       color:var(--muted);
       line-height:1.7;
     }
 
-    .cta-panel{
-      padding:32px;
+    .experience-grid{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:24px;
-      align-items:center;
+      grid-template-columns:1.02fr .98fr;
+      gap:26px;
+      align-items:start;
     }
 
-    .cta-panel p{
-      color:var(--muted);
-      line-height:1.8;
-      margin:0 0 18px;
-    }
-
-    .cta-panel .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-
-    .faq{
+    .image-combo{
       display:grid;
-      gap:14px;
-      margin-top:28px;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
     }
 
-    .faq details{
-      background:linear-gradient(180deg, rgba(255,250,243,.95), rgba(255,247,238,.90));
-      border:1px solid rgba(72,50,30,.08);
-      border-radius:20px;
-      padding:0 20px;
+    .photo-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:26px;
+      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,255,255,.4);
       box-shadow:var(--shadow);
     }
 
-    .faq summary{
-      list-style:none;
-      cursor:pointer;
-      padding:20px 0;
-      font-weight:700;
+    .photo-card.tall{min-height:480px}
+    .photo-card.mid{min-height:360px}
+    .photo-card.menu-photo{min-height:540px}
+
+    .photo-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .photo-badge{
+      position:absolute;
+      left:18px;
+      top:18px;
+      display:inline-flex;
+      align-items:center;
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(255,248,239,.82);
+      border:1px solid rgba(66,47,34,.08);
+      color:var(--brand);
+      font-size:.86rem;
+      letter-spacing:.03em;
+      backdrop-filter:blur(8px);
+    }
+
+    .copy-panel{
+      background:rgba(255,248,239,.62);
+      border:1px solid rgba(66,47,34,.08);
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
+    }
+
+    .copy-panel h2{
+      margin:0 0 14px;
+      font-size:clamp(28px,4vw,46px);
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+
+    .copy-panel p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:1rem;
+    }
+
+    .feature-list{
+      display:grid;
+      gap:12px;
+      margin:22px 0 0;
+    }
+
+    .feature-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--accent);
+      margin-top:9px;
+      flex:0 0 auto;
+      box-shadow:0 0 0 5px rgba(197,143,77,.16);
+    }
+
+    .menu-highlight{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:26px;
+      align-items:center;
+    }
+
+    .menu-copy{
+      background:rgba(255,248,239,.62);
+      border:1px solid rgba(66,47,34,.08);
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
+    }
+
+    .menu-copy h2{
+      margin:0 0 14px;
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.04;
+      letter-spacing:-.03em;
+    }
+
+    .menu-copy p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .menu-points{
+      display:grid;
+      gap:10px;
+      margin:20px 0 24px;
+    }
+
+    .menu-points span{
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:16px;
+      gap:10px;
+      color:var(--text);
     }
 
-    .faq summary::-webkit-details-marker{display:none}
-    .faq summary::after{
-      content:"+";
-      font-size:1.35rem;
-      color:var(--brown);
-      flex:0 0 auto;
+    .globo-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:26px;
     }
 
-    .faq details[open] summary::after{
-      content:"−";
+    .globo-card{
+      position:relative;
+      min-height:360px;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(66,47,34,.08);
+      box-shadow:var(--shadow);
     }
 
-    .faq .faq-body{
-      padding:0 0 20px;
+    .globo-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .globo-label{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      right:18px;
+      padding:18px;
+      border-radius:20px;
+      background:rgba(255,248,239,.76);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(66,47,34,.08);
+    }
+
+    .globo-label strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    .globo-label span{
+      color:var(--muted);
+      font-size:.94rem;
+      line-height:1.6;
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .review{
+      background:rgba(255,248,239,.68);
+      border:1px solid rgba(66,47,34,.08);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
+    }
+
+    .stars{
+      margin-bottom:14px;
+      color:#b57a31;
+      letter-spacing:.12em;
+      font-size:1rem;
+    }
+
+    .review p{
+      margin:0 0 16px;
       color:var(--muted);
       line-height:1.75;
     }
 
-    footer{
-      padding:34px 0 calc(34px + 18px);
-      border-top:1px solid rgba(72,50,30,.08);
-      background:rgba(255,248,239,.72);
+    .review strong{
+      display:block;
+      font-size:1rem;
+    }
+
+    .review small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .reserve-section{
       position:relative;
-      z-index:2;
+      padding-top:82px;
+      padding-bottom:82px;
     }
 
-    .footer-inner{
-      display:flex;
-      gap:16px;
-      justify-content:space-between;
+    .reserve-shell{
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      box-shadow:0 28px 60px rgba(45,30,20,.22);
+      min-height:580px;
+      border:1px solid rgba(66,47,34,.08);
+    }
+
+    .reserve-shell > img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .reserve-overlay{
+      position:relative;
+      z-index:1;
+      min-height:580px;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:24px;
       align-items:center;
-      flex-wrap:wrap;
+      padding:34px;
+      background:linear-gradient(90deg, rgba(34,24,17,.42) 0%, rgba(34,24,17,.26) 40%, rgba(34,24,17,.18) 100%);
     }
 
-    .footer-inner p{
+    .reserve-copy{
+      color:#fff8f1;
+      max-width:620px;
+    }
+
+    .reserve-copy .eyebrow{
+      background:rgba(255,250,244,.14);
+      color:#fff5ea;
+      border-color:rgba(255,255,255,.18);
+    }
+
+    .reserve-copy h2{
+      margin:0 0 14px;
+      font-size:clamp(34px,5vw,62px);
+      line-height:1;
+      letter-spacing:-.04em;
+    }
+
+    .reserve-copy p{
+      margin:0 0 22px;
+      color:rgba(255,245,234,.88);
+      line-height:1.8;
+      max-width:560px;
+    }
+
+    .reserve-form{
+      justify-self:end;
+      width:min(100%, 420px);
+      background:rgba(255,248,239,.82);
+      border:1px solid rgba(255,255,255,.26);
+      border-radius:28px;
+      padding:24px;
+      backdrop-filter:blur(12px);
+      box-shadow:var(--shadow);
+    }
+
+    .reserve-form h3{
+      margin:0 0 8px;
+      font-size:1.4rem;
+    }
+
+    .reserve-form p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+      margin-bottom:14px;
+    }
+
+    .field label{
+      font-size:.95rem;
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      min-height:50px;
+      border-radius:16px;
+      border:1px solid rgba(66,47,34,.12);
+      background:rgba(255,255,255,.78);
+      padding:14px 15px;
+      color:var(--text);
+      outline:none;
+    }
+
+    .field textarea{
+      min-height:104px;
+      resize:vertical;
+    }
+
+    .reserve-note{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.6;
+    }
+
+    footer{
+      padding:26px 0 38px;
+    }
+
+    .footer-box{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      padding:20px 22px;
+      border-radius:22px;
+      background:rgba(255,248,239,.72);
+      border:1px solid rgba(66,47,34,.08);
+      backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+    }
+
+    .footer-box p{
       margin:0;
       color:var(--muted);
       line-height:1.6;
     }
 
-    .footer-inner a{
-      color:var(--brown);
-      font-weight:800;
+    .footer-box a{
+      color:var(--brand);
+      font-weight:700;
     }
 
     .wa-float{
       position:fixed;
-      right:18px;
-      bottom:18px;
-      width:var(--wa-size);
-      height:var(--wa-size);
+      right:16px;
+      bottom:16px;
+      width:60px;
+      height:60px;
       border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(135deg,#25d366 0%,#1fb657 100%);
-      box-shadow:0 18px 40px rgba(20,122,54,.36);
-      z-index:30;
-      transition:.22s ease;
+      background:#25d366;
+      box-shadow:0 16px 30px rgba(0,0,0,.22);
+      z-index:95;
+      transition:transform .2s ease;
     }
 
-    .wa-float:hover{
-      transform:translateY(-3px) scale(1.03);
-    }
-
+    .wa-float:hover{transform:translateY(-3px)}
     .wa-float img{
       width:34px;
       height:34px;
       object-fit:contain;
     }
 
-    .fade-up{
-      opacity:0;
-      transform:translateY(28px);
-      transition:opacity .7s ease, transform .7s ease;
-    }
-
-    .fade-up.is-visible{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    @media (max-width:1120px){
+    @media (max-width: 1080px){
       .hero-grid,
-      .about-grid,
-      .cta-panel,
-      .service-card.featured{
+      .experience-grid,
+      .menu-highlight,
+      .reserve-overlay{
         grid-template-columns:1fr;
       }
 
-      .services-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+      .hero-image-wrap{
+        min-height:520px;
       }
 
-      .service-card.featured{
-        grid-column:span 2;
+      .reserve-form{
+        justify-self:start;
       }
 
-      .gallery-grid{
-        grid-template-columns:repeat(3,minmax(0,1fr));
-      }
-
-      .info-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
+      .intro-wrap,
+      .reviews{
+        grid-template-columns:1fr;
       }
     }
 
-    @media (max-width:760px){
-      :root{
-        --header-h:78px;
-        --wa-size:58px;
+    @media (max-width: 860px){
+      .nav-links,
+      .nav-actions .cta{
+        display:none;
       }
 
-      .section{
-        padding:72px 0;
+      .menu-btn{
+        display:flex;
+        position:relative;
       }
 
-      .header-inner{
-        align-items:flex-start;
-        padding:10px 0 12px;
-        flex-direction:column;
-      }
-
-      .nav{
-        width:100%;
-        overflow:auto;
-        flex-wrap:nowrap;
-        padding-bottom:2px;
-      }
-
-      .nav a{
-        white-space:nowrap;
-        padding:10px 12px;
+      .mobile-menu.active{
+        display:block;
       }
 
       .hero{
-        padding:26px 0 62px;
+        padding-top:26px;
+      }
+
+      .hero-grid{
+        min-height:auto;
+        gap:22px;
       }
 
       .hero-copy{
         padding:24px;
+        border-radius:26px;
       }
 
-      .hero-points,
-      .about-list,
-      .services-grid,
-      .gallery-grid,
-      .info-grid{
-        grid-template-columns:1fr;
-      }
-
-      .mini-cards{
-        grid-template-columns:1fr;
-      }
-
-      .service-card.featured{
-        grid-column:auto;
-      }
-
-      .service-card:not(.featured) .service-media,
-      .gallery-item .media{
-        height:230px;
-      }
-
-      .hero-main-media,
-      .about-media{
+      .hero-image-wrap{
         min-height:420px;
+        border-radius:28px;
       }
 
-      .hero-badge{
+      .floating-note{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        max-width:none;
+      }
+
+      .image-combo,
+      .globo-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .photo-card.tall,
+      .photo-card.mid,
+      .photo-card.menu-photo,
+      .globo-card{
+        min-height:300px;
+      }
+
+      .reserve-shell,
+      .reserve-overlay{
+        min-height:auto;
+      }
+
+      .reserve-overlay{
+        padding:22px;
+      }
+
+      .reserve-form{
+        width:100%;
+      }
+    }
+
+    @media (max-width: 560px){
+      :root{ --header-h:78px; }
+
+      .container{
+        width:min(calc(100% - 22px), var(--max));
+      }
+
+      .section{
+        padding:56px 0;
+      }
+
+      .brand img{
+        width:52px;
+        height:52px;
+      }
+
+      .brand-title{
+        font-size:.95rem;
+      }
+
+      .brand-sub{
+        font-size:.8rem;
+      }
+
+      .hero-copy h1{
+        font-size:clamp(32px,11vw,50px);
+      }
+
+      .hero-copy p,
+      .section-sub,
+      .copy-panel p,
+      .menu-copy p,
+      .reserve-copy p{
+        font-size:.98rem;
+      }
+
+      .hero-actions{
         flex-direction:column;
-        align-items:flex-start;
       }
 
-      .cta-panel{
-        padding:24px;
+      .hero-actions .cta,
+      .hero-actions .cta.secondary,
+      .reserve-form .cta{
+        width:100%;
       }
 
-      .footer-inner{
-        padding-bottom:78px;
+      .soft-card,
+      .copy-panel,
+      .menu-copy,
+      .review,
+      .reserve-form{
+        padding:20px;
+      }
+
+      .reserve-copy h2{
+        font-size:clamp(30px,9vw,46px);
+      }
+
+      .footer-box{
+        padding:18px;
       }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="brand" aria-label="Ir al inicio">
-        <div class="brand-logo">
-          <img src="https://iili.io/qVc0lxs.jpg" alt="Logo de Chacra De Monte" />
-        </div>
-        <div class="brand-text">
-          <strong>Chacra De Monte</strong>
-          <span>Día de campo + globo aerostático</span>
-        </div>
-      </a>
 
-      <nav class="nav">
-        <a href="#restaurante-principal">Restaurante</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#globo">Globo</a>
-        <a href="#restaurante">Galería</a>
-        <a href="#reservas">Reservas</a>
-      </nav>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#inicio" class="brand" aria-label="Ir al inicio">
+          <img src="https://iili.io/qWhvj72.png" alt="Logo de la estancia" />
+          <div class="brand-text">
+            <span class="brand-title">Estancia de Campo</span>
+            <span class="brand-sub">Reservas y experiencias</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#experiencia">Experiencia</a>
+          <a href="#menu">Menú</a>
+          <a href="#globo">Globo</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#reservas">Reservas</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="cta" href="#reservas">Reservar</a>
+          <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"></button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-panel">
+          <a href="#experiencia">Experiencia</a>
+          <a href="#menu">Menú</a>
+          <a href="#globo">Globo</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#reservas">Reservas</a>
+          <div class="mobile-cta-wrap">
+            <a class="cta" href="#reservas">Reservar ahora</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy fade-up">
-          <div class="eyebrow">San Miguel del Monte · Con reserva</div>
-          <h1 class="hero-title">Un día de campo distinto, con restaurante y globo aerostático.</h1>
-          <p class="hero-text">
-            Viví una experiencia pensada para desconectar, disfrutar el entorno, compartir una buena comida y sumar un momento realmente especial.
-            En Chacra De Monte se combinan naturaleza, gastronomía y una propuesta única para quienes buscan pasar el día de una forma diferente.
-          </p>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Una pausa distinta</span>
+            <h1>Campo, sabores y una experiencia para disfrutar sin apuro</h1>
+            <p>
+              Un lugar para desconectar, compartir un gran día de campo, disfrutar de la parrilla,
+              conocer el menú de la estancia y sumar, si querés, una experiencia en globo
+              que vuelve la jornada todavía más especial.
+            </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary wa-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">
-              <img src="https://iili.io/qBZhqGf.md.png" alt="WhatsApp" style="width:22px;height:22px;object-fit:contain;">
-              Reservar por WhatsApp
-            </a>
-            <a class="btn btn-secondary" href="#restaurante-principal">Ver experiencia</a>
-          </div>
+            <div class="hero-actions">
+              <a class="cta" href="#reservas">Reservar experiencia</a>
+              <a class="cta secondary" href="#menu">Ver menú destacado</a>
+            </div>
 
-          <div class="hero-points">
-            <div class="point">
-              <strong>Restaurante de campo</strong>
-              <span>Una propuesta gastronómica en un entorno natural, cálido y relajado.</span>
-            </div>
-            <div class="point">
-              <strong>Globo aerostático</strong>
-              <span>Un diferencial visual y emocional que vuelve más especial toda la jornada.</span>
-            </div>
-            <div class="point">
-              <strong>Reserva simple</strong>
-              <span>Consultá disponibilidad y coordiná tu visita directamente por WhatsApp.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual fade-up">
-          <div class="hero-main-card">
-            <div class="hero-main-media">
-              <img src="https://iili.io/qVl4Lxe.jpg" alt="Globo aerostático en Chacra De Monte" />
-              <div class="hero-badge">
-                <div>
-                  <strong>Una salida ideal para compartir</strong>
-                  <span>Día de campo, aire libre, gastronomía y una experiencia distinta cerca de la ciudad.</span>
-                </div>
-                <a class="btn btn-outline" href="#reservas">Consultar fechas</a>
-              </div>
+            <div class="hero-bullets">
+              <span>Día de campo</span>
+              <span>Parrilla libre</span>
+              <span>Menú destacado</span>
+              <span>Experiencia en globo</span>
             </div>
           </div>
 
-          <div class="mini-cards">
-            <div class="mini-card">
-              <div class="media">
-                <img src="https://iili.io/qVcG5JV.jpg" alt="Restaurante de campo" />
-              </div>
-              <div class="text">
-                <strong>Restaurante de campo</strong>
-                <span>El espacio principal del lugar, rodeado de verde y pensado para disfrutar sin apuro.</span>
-              </div>
+          <div class="hero-media">
+            <div class="hero-image-wrap">
+              <img src="https://iili.io/qVcG5JV.jpg" alt="Imagen principal de la estancia" />
             </div>
 
-            <div class="mini-card">
-              <div class="media">
-                <img src="https://iili.io/qV03FLb.jpg" alt="Mesa servida en el restaurante" />
-              </div>
-              <div class="text">
-                <strong>Gastronomía</strong>
-                <span>Comida, presentación y detalles que acompañan toda la experiencia del día.</span>
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <div class="media">
-                <img src="https://iili.io/qVl4QWu.jpg" alt="Vista del globo aerostático" />
-              </div>
-              <div class="text">
-                <strong>Globo aerostático</strong>
-                <span>Una postal inolvidable que hace que la visita se sienta todavía más especial.</span>
-              </div>
+            <div class="floating-note">
+              <strong>Reservas simples y claras</strong>
+              <span>Elegí fecha, cantidad de personas y el tipo de experiencia. Te respondemos por WhatsApp para confirmar.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="restaurante-principal">
+    <section class="section intro-strip">
       <div class="container">
-        <div class="fade-up">
-          <div class="eyebrow">Restaurante de campo</div>
-          <h2 class="section-title">El corazón del lugar para disfrutar buena comida, aire libre y una jornada distinta.</h2>
-          <p class="section-subtitle">
-            Chacra De Monte reúne lo mejor del campo en una propuesta cálida y bien cuidada. Un espacio pensado para relajarse, compartir una comida rica,
-            disfrutar del entorno natural y vivir una salida completa en un ambiente con identidad propia.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card featured fade-up">
-            <div class="service-media">
-              <img src="https://iili.io/qVcG5JV.jpg" alt="Restaurante de campo de Chacra De Monte" />
-            </div>
-            <div class="service-content">
-              <div class="service-kicker">Restaurante de campo</div>
-              <h3 class="service-title">Un espacio con identidad, naturaleza y buena gastronomía.</h3>
-              <p class="service-text">
-                El lugar invita a pasar el día en un entorno relajado, rodeado de verde y con una propuesta gastronómica que acompaña la experiencia desde el primer momento.
-                Ideal para quienes buscan comer rico, disfrutar el paisaje y vivir una salida diferente.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-card fade-up">
-            <div class="service-media">
-              <img src="https://iili.io/qVc8ITb.jpg" alt="Sector del predio con entorno natural" />
-            </div>
-            <div class="service-content">
-              <div class="service-kicker">Entorno natural</div>
-              <h3 class="service-title">Espacios para bajar un cambio</h3>
-              <p class="service-text">
-                Cada rincón del predio acompaña la idea de descansar, recorrer y disfrutar del paisaje con tranquilidad.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-card fade-up">
-            <div class="service-media">
-              <img src="https://iili.io/qVc8xyu.jpg" alt="Vista del restaurante de campo entre árboles" />
-            </div>
-            <div class="service-content">
-              <div class="service-kicker">Ambiente del lugar</div>
-              <h3 class="service-title">Una experiencia cálida y relajada</h3>
-              <p class="service-text">
-                El restaurante se integra al entorno natural y transmite esa sensación de campo que vuelve especial toda la jornada.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-card fade-up">
-            <div class="service-media">
-              <img src="https://iili.io/qVc8Tjj.jpg" alt="Sector gastronómico y mesas del restaurante" />
-            </div>
-            <div class="service-content">
-              <div class="service-kicker">Gastronomía</div>
-              <h3 class="service-title">Mesas preparadas para disfrutar</h3>
-              <p class="service-text">
-                La propuesta gastronómica forma parte central del paseo, con un espacio pensado para compartir, almorzar y pasar un gran momento.
-              </p>
-            </div>
-          </article>
+        <div class="intro-wrap">
+          <div class="soft-card">
+            <h3>Un entorno que invita a quedarse</h3>
+            <p>Una propuesta pensada para quienes buscan naturaleza, buena atención y una experiencia tranquila en un entorno cuidado.</p>
+          </div>
+          <div class="soft-card">
+            <h3>Sabores que acompañan la jornada</h3>
+            <p>Parrilla, menú y momentos para compartir con calma, sin una web recargada ni una experiencia apurada.</p>
+          </div>
+          <div class="soft-card">
+            <h3>Opciones para un día especial</h3>
+            <p>Día de campo, propuestas gastronómicas y la posibilidad de sumar una vivencia en globo para hacerla inolvidable.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="experiencia">
-      <div class="container about-grid">
-        <div class="about-card fade-up">
-          <div class="about-media">
-            <img src="https://iili.io/qVlhMpR.jpg" alt="Vista del predio de Chacra De Monte" />
+      <div class="container">
+        <span class="eyebrow">Experiencia de campo</span>
+        <h2 class="section-title">Una jornada para conectar con lo simple y disfrutar de verdad</h2>
+        <p class="section-sub">
+          Seleccionamos pocas imágenes para mostrar lo esencial: el clima del lugar, el día de campo y la experiencia general,
+          sin saturar la web ni convertirla en una galería interminable.
+        </p>
+
+        <div class="experience-grid" style="margin-top:28px;">
+          <div class="image-combo">
+            <article class="photo-card tall">
+              <img src="https://iili.io/qWNINA7.jpg" alt="Día de campo en la estancia" />
+              <span class="photo-badge">Día de campo</span>
+            </article>
+
+            <article class="photo-card mid">
+              <img src="https://iili.io/qWNIWF4.jpg" alt="Momento de relax en la estancia" />
+              <span class="photo-badge">Naturaleza y descanso</span>
+            </article>
+          </div>
+
+          <div class="copy-panel">
+            <h2>Una escapada cálida, cuidada y con personalidad propia</h2>
+            <p>
+              La propuesta combina aire libre, momentos para compartir, buena gastronomía y un entorno que transmite calma desde que llegás.
+              Todo está pensado para que la reserva sea clara y la experiencia se sienta especial desde el primer contacto.
+            </p>
+            <p>
+              Ya sea para una salida en pareja, una jornada en familia o una experiencia distinta con amigos,
+              el lugar invita a bajar un cambio y disfrutar sin vueltas.
+            </p>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="dot"></span>
+                <div>Ambiente sereno, natural y visualmente cuidado.</div>
+              </div>
+              <div class="feature-item">
+                <span class="dot"></span>
+                <div>Experiencias que combinan campo, gastronomía y momentos memorables.</div>
+              </div>
+              <div class="feature-item">
+                <span class="dot"></span>
+                <div>Proceso de reserva simple para organizar tu visita con claridad.</div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="about-copy fade-up">
-          <div class="eyebrow">La experiencia del lugar</div>
-          <h2 class="section-title">Mucho más que una salida: un lugar para frenar, disfrutar y compartir.</h2>
-          <p>
-            Chacra De Monte está pensada para quienes valoran los espacios al aire libre, la buena atención y esos planes que se recuerdan.
-            La propuesta combina restaurante de campo, entorno natural y la posibilidad de sumar el encanto del globo aerostático dentro de una misma jornada.
-          </p>
-          <p>
-            La idea no es solo venir a comer o pasear, sino vivir una experiencia completa, relajada y distinta. Ideal para parejas, familias,
-            salidas especiales o para regalarse un día diferente cerca de la ciudad.
-          </p>
+    <section class="section" id="gastronomia">
+      <div class="container">
+        <span class="eyebrow">Asador y parrilla libre</span>
+        <div class="experience-grid" style="margin-top:4px;">
+          <div class="copy-panel">
+            <h2>Sabores de campo que acompañan toda la experiencia</h2>
+            <p>
+              La gastronomía también tiene protagonismo. La parrilla, el asador y la propuesta general del día
+              están pensados para que la comida sea parte del recuerdo y no solo un detalle más.
+            </p>
+            <p>
+              Elegimos pocas imágenes y bien ubicadas para mostrar esta parte con fuerza,
+              sin caer en una web pesada ni estructurada de más.
+            </p>
 
-          <div class="about-list">
-            <div class="item">
-              <strong>Ambiente natural</strong>
-              <span>Un entorno cuidado, amplio y con identidad propia para disfrutar sin apuro.</span>
+            <div class="feature-list">
+              <div class="feature-item">
+                <span class="dot"></span>
+                <div>Parrilla libre y clima de encuentro.</div>
+              </div>
+              <div class="feature-item">
+                <span class="dot"></span>
+                <div>Una propuesta ideal para compartir con tiempo.</div>
+              </div>
+              <div class="feature-item">
+                <span class="dot"></span>
+                <div>Comida que acompaña el espíritu de la estancia.</div>
+              </div>
             </div>
-            <div class="item">
-              <strong>Propuesta diferente</strong>
-              <span>La combinación de campo, gastronomía y globo hace que el lugar se destaque.</span>
+          </div>
+
+          <div class="image-combo">
+            <article class="photo-card mid">
+              <img src="https://iili.io/qV02mrl.jpg" alt="Parrilla libre de la estancia" />
+              <span class="photo-badge">Parrilla libre</span>
+            </article>
+
+            <article class="photo-card tall">
+              <img src="https://iili.io/qV03FLb.jpg" alt="Asador de la estancia" />
+              <span class="photo-badge">Asador</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <span class="eyebrow">Menú destacado</span>
+
+        <div class="menu-highlight" style="margin-top:10px;">
+          <article class="photo-card menu-photo">
+            <img src="https://iili.io/qWNSe3u.jpg" alt="Menú destacado de la estancia" />
+            <span class="photo-badge">Menú del día</span>
+          </article>
+
+          <div class="menu-copy">
+            <h2>Una propuesta gastronómica clara y protagonista</h2>
+            <p>
+              Esta sección está pensada para destacar el menú sin mezclarlo con otras fotos.
+              La idea es que se vea importante, ordenado y fácil de identificar dentro del recorrido de la web.
+            </p>
+            <p>
+              Podés usar este bloque para presentar el menú vigente, opciones especiales,
+              experiencias gastronómicas incluidas o detalles para quienes quieran reservar con anticipación.
+            </p>
+
+            <div class="menu-points">
+              <span><strong>•</strong> Menú visible y bien ubicado dentro de la experiencia.</span>
+              <span><strong>•</strong> Ideal para reforzar valor y ayudar a decidir la reserva.</span>
+              <span><strong>•</strong> Perfecto para acompañar el cierre comercial del sitio.</span>
             </div>
-            <div class="item">
-              <strong>Ideal para compartir</strong>
-              <span>Una experiencia pensada para vivir con familia, amigos o en pareja.</span>
-            </div>
-            <div class="item">
-              <strong>Reserva anticipada</strong>
-              <span>La atención es con reserva para organizar mejor cada jornada.</span>
-            </div>
+
+            <a class="cta" href="#reservas">Consultar disponibilidad</a>
           </div>
         </div>
       </div>
@@ -1054,223 +1175,206 @@
 
     <section class="section" id="globo">
       <div class="container">
-        <div class="gallery-section-head fade-up">
-          <div>
-            <div class="eyebrow">Experiencia destacada</div>
-            <h2 class="section-title">Globo aerostático</h2>
-            <p class="section-subtitle">
-              Uno de los grandes atractivos del lugar. Una experiencia visualmente impactante que vuelve la visita todavía más especial y memorable.
-            </p>
-          </div>
-          <a class="btn btn-outline" href="#reservas">Consultar por reservas</a>
-        </div>
+        <span class="eyebrow">Experiencia especial</span>
+        <h2 class="section-title">El paseo en globo como broche distinto para una jornada inolvidable</h2>
+        <p class="section-sub">
+          Un diferencial fuerte dentro de la propuesta. Lo separamos del resto para que tenga identidad propia y se sienta como una experiencia premium dentro del sitio.
+        </p>
 
-        <div class="gallery-grid">
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qVl4Lxe.jpg" alt="Globo aerostático elevándose sobre el campo" />
+        <div class="globo-wrap">
+          <article class="globo-card">
+            <img src="https://iili.io/qVl4Lxe.jpg" alt="Experiencia en globo aerostático" />
+            <div class="globo-label">
+              <strong>Una vista distinta, un momento único</strong>
+              <span>Ideal para quienes buscan sumar algo memorable a su visita y vivir el campo desde otra perspectiva.</span>
             </div>
-            <div class="caption">El globo sobre el predio crea una postal única y transforma la salida en una experiencia inolvidable.</div>
           </article>
 
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qVl4QWu.jpg" alt="Globo aerostático amarillo en Chacra De Monte" />
+          <article class="globo-card">
+            <img src="https://iili.io/qWwpZnn.jpg" alt="Paseo en globo en la estancia" />
+            <div class="globo-label">
+              <strong>Una experiencia que eleva la jornada</strong>
+              <span>Perfecta para ocasiones especiales, escapadas distintas y reservas con un toque premium.</span>
             </div>
-            <div class="caption">Una imagen emblemática del lugar, ideal para quienes buscan vivir algo diferente en contacto con la naturaleza.</div>
-          </article>
-
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qVl4Zib.jpg" alt="Vista cercana del globo aerostático" />
-            </div>
-            <div class="caption">El globo aporta ese diferencial especial que hace que la experiencia se recuerde mucho más.</div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="restaurante">
+    <section class="section" id="resenas">
       <div class="container">
-        <div class="gallery-section-head fade-up">
-          <div>
-            <div class="eyebrow">Galería del restaurante</div>
-            <h2 class="section-title">Restaurante, comida y detalles del lugar</h2>
-            <p class="section-subtitle">
-              Una selección de imágenes para mostrar la esencia de Chacra De Monte: el espacio, la propuesta gastronómica y esos detalles que acompañan toda la jornada.
+        <span class="eyebrow">Reseñas</span>
+        <h2 class="section-title">Comentarios que transmiten la calidez del lugar</h2>
+        <p class="section-sub">
+          Sumamos reseñas cálidas y creíbles para reforzar confianza, acompañar la decisión y darle humanidad al recorrido.
+        </p>
+
+        <div class="reviews">
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+              Fuimos un domingo y la verdad superó lo que esperábamos. El lugar transmite mucha paz,
+              la atención fue muy cálida y todo estaba muy bien organizado. Se nota que cuidan la experiencia.
             </p>
-          </div>
-          <a class="btn btn-outline" href="https://www.instagram.com/chacrademonte_/" target="_blank" rel="noopener noreferrer">Ver más en Instagram</a>
-        </div>
-
-        <div class="gallery-grid">
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV0397S.jpg" alt="Vista general del restaurante y el predio" />
-            </div>
-            <div class="caption">Una vista del lugar que muestra el entorno de campo y el estilo cálido de la experiencia.</div>
+            <strong>Marina G.</strong>
+            <small>Visita en pareja</small>
           </article>
 
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV02mrl.jpg" alt="Espacio del restaurante preparado para recibir visitantes" />
-            </div>
-            <div class="caption">Un ambiente pensado para compartir el día con comodidad, verde alrededor y una atmósfera relajada.</div>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+              Nos encantó el día de campo. La comida estuvo muy bien y el ambiente se sintió natural, tranquilo y familiar.
+              Ideal para cortar la rutina y pasar un día distinto sin irse lejos de lo simple.
+            </p>
+            <strong>Federico R.</strong>
+            <small>Salida en familia</small>
           </article>
 
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV03Jp9.jpg" alt="Sector del restaurante de campo entre naturaleza" />
-            </div>
-            <div class="caption">La propuesta combina gastronomía y paisaje en un espacio que transmite tranquilidad desde que llegás.</div>
-          </article>
-
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV02y22.jpg" alt="Otro sector del restaurante de campo" />
-            </div>
-            <div class="caption">Cada sector del restaurante acompaña la experiencia con un estilo simple, cuidado y acogedor.</div>
-          </article>
-
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV03FLb.jpg" alt="Mesa servida con propuesta gastronómica" />
-            </div>
-            <div class="caption">Una mesa bien presentada que refuerza el costado gastronómico del lugar y suma valor a toda la visita.</div>
-          </article>
-
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV03fBj.jpg" alt="Detalle gastronómico del restaurante" />
-            </div>
-            <div class="caption">Detalles de la comida y la presentación que ayudan a que la experiencia se sienta completa y bien cuidada.</div>
-          </article>
-
-          <article class="gallery-item fade-up">
-            <div class="media">
-              <img src="https://iili.io/qV03oYB.jpg" alt="Asado y cocina de campo" />
-            </div>
-            <div class="caption">El espíritu del campo también se ve en la comida, con sabores y momentos ideales para compartir.</div>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+              Reservamos porque queríamos hacer algo especial y fue una muy buena elección.
+              El paseo en globo le dio un plus hermoso a toda la jornada. Muy recomendable para regalar o compartir.
+            </p>
+            <strong>Lucía M.</strong>
+            <small>Experiencia especial</small>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="reservas">
+    <section class="section reserve-section" id="reservas">
       <div class="container">
-        <div class="fade-up">
-          <div class="eyebrow">Información útil</div>
-          <h2 class="section-title">Reservá tu experiencia</h2>
-          <p class="section-subtitle">
-            Si querés consultar disponibilidad, fechas o hacer tu reserva, podés comunicarte directamente por WhatsApp. La atención se organiza con reserva previa.
-          </p>
-        </div>
+        <div class="reserve-shell">
+          <img src="https://iili.io/qVlhMpR.jpg" alt="Imagen final de experiencia en globo" />
 
-        <div class="info-grid">
-          <article class="info-card fade-up">
-            <strong>Ubicación</strong>
-            <p>Córdoba 935, San Miguel del Monte 7220.</p>
-          </article>
-
-          <article class="info-card fade-up">
-            <strong>Modalidad</strong>
-            <p>Atención únicamente con reserva para organizar mejor cada visita.</p>
-          </article>
-
-          <article class="info-card fade-up">
-            <strong>Horario de referencia</strong>
-            <p>Apertura desde las 12 hs hasta las 20 hs, según jornada y disponibilidad.</p>
-          </article>
-        </div>
-
-        <div class="cta-panel fade-up" style="margin-top:28px;">
-          <div>
-            <h3 class="service-title" style="margin-bottom:12px;">Consultá por fechas, disponibilidad y reservas.</h3>
-            <p>
-              La consulta es simple y directa. Tocás el botón, enviás el mensaje y coordinás la reserva por WhatsApp.
-              También podés seguir viendo más contenido del lugar en Instagram.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary wa-link" href="#" target="_blank" rel="noopener noreferrer">
-                <img src="https://iili.io/qBZhqGf.md.png" alt="WhatsApp" style="width:22px;height:22px;object-fit:contain;">
-                Reservar por WhatsApp
-              </a>
-              <a class="btn btn-secondary" href="https://www.instagram.com/chacrademonte_/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+          <div class="reserve-overlay">
+            <div class="reserve-copy">
+              <span class="eyebrow">Reservá tu lugar</span>
+              <h2>Una reserva clara para una experiencia que vale la pena vivir</h2>
+              <p>
+                Elegí la experiencia, indicá la cantidad de personas y dejá tus datos.
+                El sistema arma el mensaje y te lleva directo a WhatsApp para continuar la confirmación de forma simple.
+              </p>
+              <p>
+                Así evitamos pasos de más y mantenemos el proceso ordenado, humano y fácil de entender.
+              </p>
             </div>
+
+            <form class="reserve-form" id="reserveForm">
+              <h3>Solicitud de reserva</h3>
+              <p>Completá estos datos y continuá por WhatsApp.</p>
+
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu número" required />
+              </div>
+
+              <div class="field">
+                <label for="fecha">Fecha deseada</label>
+                <input type="date" id="fecha" name="fecha" required />
+              </div>
+
+              <div class="field">
+                <label for="personas">Cantidad de personas</label>
+                <select id="personas" name="personas" required>
+                  <option value="">Seleccionar</option>
+                  <option>1 persona</option>
+                  <option>2 personas</option>
+                  <option>3 a 4 personas</option>
+                  <option>5 a 8 personas</option>
+                  <option>Más de 8 personas</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="experiencia">Tipo de experiencia</label>
+                <select id="experiencia" name="experiencia" required>
+                  <option value="">Seleccionar</option>
+                  <option>Día de campo</option>
+                  <option>Parrilla libre</option>
+                  <option>Día de campo + menú</option>
+                  <option>Experiencia en globo</option>
+                  <option>Experiencia completa</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="mensaje">Comentario adicional</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Ej: queremos consultar disponibilidad, horarios o una ocasión especial"></textarea>
+              </div>
+
+              <button type="submit" class="cta">Enviar reserva por WhatsApp</button>
+
+              <div class="reserve-note">
+                Cambiá el número de WhatsApp en el script por el número real del lugar para que quede funcionando.
+              </div>
+            </form>
           </div>
-
-          <div class="info-card" style="box-shadow:none;">
-            <strong>Importante</strong>
-            <p>
-              Reemplazá el número de WhatsApp dentro del código para que el botón quede funcionando con el contacto real del lugar.
-              El mensaje ya queda armado para facilitar la consulta.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq">
-          <details class="fade-up">
-            <summary>¿Cómo se realiza la reserva?</summary>
-            <div class="faq-body">
-              La consulta se hace por WhatsApp. Desde ahí se puede pedir disponibilidad, fechas y la información necesaria para coordinar la visita.
-            </div>
-          </details>
-
-          <details class="fade-up">
-            <summary>¿La experiencia incluye restaurante y globo?</summary>
-            <div class="faq-body">
-              La propuesta combina restaurante de campo, jornada al aire libre y globo aerostático. Los detalles exactos de cada fecha se confirman al momento de consultar.
-            </div>
-          </details>
-
-          <details class="fade-up">
-            <summary>¿Se puede ver más contenido del lugar?</summary>
-            <div class="faq-body">
-              Sí. La web incluye acceso directo al perfil de Instagram para seguir explorando más imágenes y publicaciones.
-            </div>
-          </details>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <p>Chacra De Monte · Día de campo, restaurante y experiencia con globo aerostático.</p>
-      <p>Creado y diseñado por <a href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Ciborg 347</a></p>
+    <div class="container">
+      <div class="footer-box">
+        <p>Estancia de Campo · Día de campo, gastronomía y experiencias especiales con reservas claras.</p>
+        <p>Creado y diseñado por <a href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Ciborg 347</a></p>
+      </div>
     </div>
   </footer>
 
-  <a class="wa-float wa-link" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <a class="wa-float" href="#reservas" aria-label="Ir a reservas">
     <img src="https://iili.io/qBZhqGf.md.png" alt="WhatsApp" />
   </a>
 
   <script>
-    const WHATSAPP_NUMBER = "5490000000000";
-    const WHATSAPP_TEXT = "Hola! Quiero consultar por reservas para vivir la experiencia en Chacra De Monte.";
-    const INSTAGRAM_URL = "https://www.instagram.com/chacrademonte_/";
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileLinks = mobileMenu.querySelectorAll("a");
 
-    function buildWhatsappUrl(number, text) {
-      const cleanNumber = String(number).replace(/\D/g, "");
-      if (!cleanNumber || cleanNumber === "5490000000000") return INSTAGRAM_URL;
-      return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`;
-    }
-
-    const waUrl = buildWhatsappUrl(WHATSAPP_NUMBER, WHATSAPP_TEXT);
-    document.querySelectorAll(".wa-link").forEach(link => {
-      link.href = waUrl;
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
     });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
       });
-    }, { threshold: 0.14 });
+    });
 
-    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+    const form = document.getElementById("reserveForm");
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const whatsappNumber = "5491100000000"; // REEMPLAZAR POR EL NUMERO REAL
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const fecha = document.getElementById("fecha").value.trim();
+      const personas = document.getElementById("personas").value.trim();
+      const experiencia = document.getElementById("experiencia").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+
+      const texto =
+`Hola, quiero consultar una reserva.
+Nombre: ${nombre}
+Telefono: ${telefono}
+Fecha deseada: ${fecha}
+Cantidad de personas: ${personas}
+Experiencia: ${experiencia}
+Comentario: ${mensaje || "Sin comentario adicional"}`;
+
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    });
   </script>
 </body>
 </html>
