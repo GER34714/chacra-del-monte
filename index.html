@@ -8,7 +8,7 @@
 
   <meta property="og:title" content="Chacra de Monte | Día de campo y reservas" />
   <meta property="og:description" content="Día de campo, parrilla libre, menú destacado y experiencia en globo. Reservá tu lugar en Chacra de Monte." />
-  <meta property="og:image" content="https://iili.io/qVcG5JV.jpg" />
+  <meta property="og:image" content="https://iili.io/qWig7f9.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_AR" />
 
@@ -16,16 +16,15 @@
     :root{
       --bg:#f6f0e6;
       --bg-soft:#efe6d7;
-      --paper:rgba(255,255,255,.72);
-      --paper-strong:rgba(255,255,255,.84);
-      --text:#2f251d;
-      --muted:#6d5a4c;
-      --line:rgba(66,47,34,.12);
+      --paper:rgba(255,255,255,.76);
+      --paper-strong:rgba(255,255,255,.88);
+      --text:#241a13;
+      --muted:#564538;
+      --line:rgba(66,47,34,.14);
       --brand:#6e4d34;
       --brand-2:#8a6a4f;
       --accent:#c58f4d;
-      --accent-soft:#e6c59a;
-      --shadow:0 18px 45px rgba(55,35,20,.12);
+      --shadow:0 18px 45px rgba(55,35,20,.14);
       --max:1180px;
       --header-h:84px;
     }
@@ -37,7 +36,7 @@
       font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
       background:
-        linear-gradient(rgba(246,240,230,.72), rgba(246,240,230,.72)),
+        linear-gradient(rgba(246,240,230,.68), rgba(246,240,230,.68)),
         url("https://iili.io/qWORwFa.jpg") center center / cover fixed no-repeat;
       overflow-x:hidden;
     }
@@ -61,28 +60,31 @@
       line-height:1.06;
       margin:0 0 14px;
       letter-spacing:-.02em;
+      color:#231912;
     }
 
     .section-sub{
       margin:0;
-      color:var(--muted);
-      font-size:1.04rem;
-      line-height:1.7;
+      color:#4d3d31;
+      font-size:1.06rem;
+      line-height:1.75;
       max-width:760px;
+      text-shadow:0 1px 0 rgba(255,255,255,.12);
     }
 
     .eyebrow{
       display:inline-block;
       margin-bottom:14px;
       padding:8px 14px;
-      border:1px solid rgba(110,77,52,.14);
+      border:1px solid rgba(110,77,52,.16);
       border-radius:999px;
-      background:rgba(255,255,255,.46);
+      background:rgba(255,255,255,.56);
       color:var(--brand);
       font-size:.86rem;
       letter-spacing:.08em;
       text-transform:uppercase;
       backdrop-filter:blur(6px);
+      font-weight:700;
     }
 
     header{
@@ -90,7 +92,7 @@
       top:0;
       z-index:90;
       backdrop-filter:blur(12px);
-      background:rgba(246,240,230,.62);
+      background:rgba(246,240,230,.74);
       border-bottom:1px solid rgba(66,47,34,.08);
     }
 
@@ -135,7 +137,7 @@
 
     .brand-sub{
       font-size:.84rem;
-      color:var(--muted);
+      color:#5f4e41;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -150,13 +152,14 @@
     .nav-links a{
       padding:10px 14px;
       border-radius:999px;
-      color:var(--muted);
+      color:#59483b;
       transition:.22s ease;
       font-size:.96rem;
+      font-weight:600;
     }
 
     .nav-links a:hover{
-      background:rgba(255,255,255,.55);
+      background:rgba(255,255,255,.6);
       color:var(--text);
     }
 
@@ -183,9 +186,9 @@
     }
 
     .cta.secondary{
-      background:rgba(255,255,255,.68);
+      background:rgba(255,255,255,.75);
       color:var(--text);
-      border:1px solid rgba(66,47,34,.10);
+      border:1px solid rgba(66,47,34,.12);
       box-shadow:none;
     }
 
@@ -201,7 +204,7 @@
       height:48px;
       border-radius:14px;
       border:1px solid rgba(66,47,34,.10);
-      background:rgba(255,255,255,.7);
+      background:rgba(255,255,255,.78);
       align-items:center;
       justify-content:center;
       cursor:pointer;
@@ -233,7 +236,7 @@
       margin-top:6px;
       border-radius:22px;
       border:1px solid rgba(66,47,34,.08);
-      background:rgba(255,255,255,.78);
+      background:rgba(255,255,255,.82);
       backdrop-filter:blur(10px);
       box-shadow:var(--shadow);
       overflow:hidden;
@@ -243,7 +246,8 @@
       display:block;
       padding:16px 18px;
       border-bottom:1px solid rgba(66,47,34,.06);
-      color:var(--muted);
+      color:#59483b;
+      font-weight:600;
     }
 
     .mobile-panel a:last-child{border-bottom:none}
@@ -257,15 +261,15 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+      grid-template-columns:1.02fr .98fr;
       align-items:center;
       gap:34px;
       min-height:calc(100vh - var(--header-h) - 30px);
     }
 
     .hero-copy{
-      background:rgba(255,248,239,.52);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,248,239,.60);
+      border:1px solid rgba(66,47,34,.10);
       border-radius:32px;
       padding:34px;
       box-shadow:var(--shadow);
@@ -280,8 +284,8 @@
       margin-bottom:14px;
       padding:10px 16px;
       border-radius:999px;
-      background:rgba(255,255,255,.62);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(66,47,34,.10);
       color:var(--brand);
       font-size:.9rem;
       letter-spacing:.1em;
@@ -294,14 +298,16 @@
       font-size:clamp(40px,6vw,72px);
       line-height:.97;
       letter-spacing:-.045em;
+      color:#221812;
     }
 
     .hero-copy p{
       margin:0 0 26px;
-      color:var(--muted);
-      font-size:1.06rem;
+      color:#4e3e31;
+      font-size:1.08rem;
       line-height:1.8;
       max-width:580px;
+      font-weight:500;
     }
 
     .hero-actions{
@@ -322,10 +328,11 @@
       align-items:center;
       padding:10px 14px;
       border-radius:999px;
-      background:rgba(255,255,255,.62);
-      border:1px solid rgba(66,47,34,.08);
-      color:var(--text);
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(66,47,34,.10);
+      color:#2f251d;
       font-size:.94rem;
+      font-weight:600;
     }
 
     .hero-media{
@@ -356,9 +363,9 @@
       max-width:290px;
       padding:16px 18px;
       border-radius:20px;
-      background:rgba(255,250,244,.78);
+      background:rgba(255,250,244,.86);
       backdrop-filter:blur(10px);
-      border:1px solid rgba(66,47,34,.08);
+      border:1px solid rgba(66,47,34,.10);
       box-shadow:var(--shadow);
     }
 
@@ -366,12 +373,14 @@
       display:block;
       margin-bottom:6px;
       font-size:1rem;
+      color:#221812;
     }
 
     .floating-note span{
-      color:var(--muted);
+      color:#4b3b2f;
       font-size:.94rem;
       line-height:1.55;
+      font-weight:500;
     }
 
     .intro-strip{
@@ -386,7 +395,7 @@
 
     .soft-card{
       background:var(--paper);
-      border:1px solid rgba(66,47,34,.08);
+      border:1px solid rgba(66,47,34,.10);
       border-radius:24px;
       padding:24px;
       box-shadow:var(--shadow);
@@ -396,12 +405,14 @@
     .soft-card h3{
       margin:0 0 10px;
       font-size:1.18rem;
+      color:#241a13;
     }
 
     .soft-card p{
       margin:0;
-      color:var(--muted);
-      line-height:1.7;
+      color:#514034;
+      line-height:1.72;
+      font-weight:500;
     }
 
     .experience-grid{
@@ -445,17 +456,18 @@
       align-items:center;
       padding:9px 14px;
       border-radius:999px;
-      background:rgba(255,248,239,.82);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,248,239,.88);
+      border:1px solid rgba(66,47,34,.10);
       color:var(--brand);
       font-size:.86rem;
       letter-spacing:.03em;
       backdrop-filter:blur(8px);
+      font-weight:700;
     }
 
     .copy-panel{
-      background:rgba(255,248,239,.62);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,248,239,.68);
+      border:1px solid rgba(66,47,34,.10);
       border-radius:30px;
       padding:30px;
       box-shadow:var(--shadow);
@@ -467,13 +479,15 @@
       font-size:clamp(28px,4vw,46px);
       line-height:1.05;
       letter-spacing:-.03em;
+      color:#221812;
     }
 
     .copy-panel p{
       margin:0 0 18px;
-      color:var(--muted);
-      line-height:1.8;
+      color:#4f3f32;
+      line-height:1.82;
       font-size:1rem;
+      font-weight:500;
     }
 
     .feature-list{
@@ -486,8 +500,9 @@
       display:flex;
       align-items:flex-start;
       gap:12px;
-      color:var(--text);
-      line-height:1.65;
+      color:#2a2019;
+      line-height:1.68;
+      font-weight:600;
     }
 
     .dot{
@@ -508,8 +523,8 @@
     }
 
     .menu-copy{
-      background:rgba(255,248,239,.62);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,248,239,.68);
+      border:1px solid rgba(66,47,34,.10);
       border-radius:30px;
       padding:34px;
       box-shadow:var(--shadow);
@@ -521,12 +536,14 @@
       font-size:clamp(30px,4vw,48px);
       line-height:1.04;
       letter-spacing:-.03em;
+      color:#221812;
     }
 
     .menu-copy p{
       margin:0 0 18px;
-      color:var(--muted);
-      line-height:1.8;
+      color:#4f3f32;
+      line-height:1.82;
+      font-weight:500;
     }
 
     .menu-points{
@@ -539,8 +556,9 @@
       display:flex;
       align-items:center;
       gap:10px;
-      color:var(--text);
-      line-height:1.65;
+      color:#2f251d;
+      line-height:1.68;
+      font-weight:600;
     }
 
     .globo-wrap{
@@ -573,21 +591,23 @@
       right:18px;
       padding:18px;
       border-radius:20px;
-      background:rgba(255,248,239,.76);
+      background:rgba(255,248,239,.84);
       backdrop-filter:blur(10px);
-      border:1px solid rgba(66,47,34,.08);
+      border:1px solid rgba(66,47,34,.10);
     }
 
     .globo-label strong{
       display:block;
       margin-bottom:6px;
       font-size:1rem;
+      color:#221812;
     }
 
     .globo-label span{
-      color:var(--muted);
+      color:#4b3b2f;
       font-size:.94rem;
       line-height:1.6;
+      font-weight:500;
     }
 
     .reviews{
@@ -598,8 +618,8 @@
     }
 
     .review{
-      background:rgba(255,248,239,.68);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,248,239,.72);
+      border:1px solid rgba(66,47,34,.10);
       border-radius:24px;
       padding:24px;
       box-shadow:var(--shadow);
@@ -615,20 +635,23 @@
 
     .review p{
       margin:0 0 16px;
-      color:var(--muted);
-      line-height:1.75;
+      color:#4d3d31;
+      line-height:1.78;
+      font-weight:500;
     }
 
     .review strong{
       display:block;
       font-size:1rem;
+      color:#241a13;
     }
 
     .review small{
       display:block;
       margin-top:4px;
-      color:var(--muted);
+      color:#5a493c;
       font-size:.9rem;
+      font-weight:600;
     }
 
     .reserve-section{
@@ -651,8 +674,10 @@
       inset:0;
       width:100%;
       height:100%;
-      object-fit:cover;
-      object-position:center;
+      object-fit:contain;
+      object-position:center center;
+      transform:scale(1.03);
+      background:#d8c1aa;
     }
 
     .reserve-overlay{
@@ -664,18 +689,19 @@
       gap:24px;
       align-items:center;
       padding:34px;
-      background:linear-gradient(90deg, rgba(34,24,17,.34) 0%, rgba(34,24,17,.20) 42%, rgba(34,24,17,.16) 100%);
+      background:linear-gradient(90deg, rgba(30,20,14,.44) 0%, rgba(30,20,14,.26) 42%, rgba(30,20,14,.20) 100%);
     }
 
     .reserve-copy{
       color:#fff8f1;
       max-width:620px;
+      text-shadow:0 2px 12px rgba(0,0,0,.26);
     }
 
     .reserve-copy .eyebrow{
-      background:rgba(255,250,244,.14);
-      color:#fff5ea;
-      border-color:rgba(255,255,255,.18);
+      background:rgba(255,250,244,.18);
+      color:#fff8f1;
+      border-color:rgba(255,255,255,.22);
     }
 
     .reserve-copy h2{
@@ -683,20 +709,22 @@
       font-size:clamp(34px,5vw,62px);
       line-height:1;
       letter-spacing:-.04em;
+      color:#fffdf8;
     }
 
     .reserve-copy p{
       margin:0 0 22px;
-      color:rgba(255,245,234,.9);
-      line-height:1.8;
+      color:rgba(255,247,239,.98);
+      line-height:1.86;
       max-width:560px;
+      font-weight:500;
     }
 
     .reserve-form{
       justify-self:end;
       width:min(100%, 420px);
-      background:rgba(255,248,239,.82);
-      border:1px solid rgba(255,255,255,.26);
+      background:rgba(255,248,239,.88);
+      border:1px solid rgba(255,255,255,.30);
       border-radius:28px;
       padding:24px;
       backdrop-filter:blur(12px);
@@ -706,12 +734,14 @@
     .reserve-form h3{
       margin:0 0 8px;
       font-size:1.4rem;
+      color:#221812;
     }
 
     .reserve-form p{
       margin:0 0 18px;
-      color:var(--muted);
+      color:#514034;
       line-height:1.65;
+      font-weight:500;
     }
 
     .field{
@@ -722,7 +752,7 @@
 
     .field label{
       font-size:.95rem;
-      color:var(--text);
+      color:#2a2019;
       font-weight:700;
     }
 
@@ -732,10 +762,10 @@
       width:100%;
       min-height:50px;
       border-radius:16px;
-      border:1px solid rgba(66,47,34,.12);
-      background:rgba(255,255,255,.78);
+      border:1px solid rgba(66,47,34,.14);
+      background:rgba(255,255,255,.84);
       padding:14px 15px;
-      color:var(--text);
+      color:#241a13;
       outline:none;
     }
 
@@ -746,9 +776,10 @@
 
     .reserve-note{
       margin-top:12px;
-      color:var(--muted);
+      color:#5a493c;
       font-size:.9rem;
       line-height:1.6;
+      font-weight:500;
     }
 
     footer{
@@ -763,16 +794,17 @@
       flex-wrap:wrap;
       padding:20px 22px;
       border-radius:22px;
-      background:rgba(255,248,239,.72);
-      border:1px solid rgba(66,47,34,.08);
+      background:rgba(255,248,239,.76);
+      border:1px solid rgba(66,47,34,.10);
       backdrop-filter:blur(10px);
       box-shadow:var(--shadow);
     }
 
     .footer-box p{
       margin:0;
-      color:var(--muted);
+      color:#564538;
       line-height:1.6;
+      font-weight:500;
     }
 
     .footer-box a{
@@ -883,6 +915,12 @@
         min-height:auto;
       }
 
+      .reserve-shell > img{
+        object-fit:cover;
+        object-position:center;
+        transform:none;
+      }
+
       .reserve-overlay{
         padding:22px;
       }
@@ -925,7 +963,7 @@
       .copy-panel p,
       .menu-copy p,
       .reserve-copy p{
-        font-size:.98rem;
+        font-size:.99rem;
       }
 
       .hero-actions{
@@ -1025,7 +1063,7 @@
 
           <div class="hero-media">
             <div class="hero-image-wrap">
-              <img src="https://iili.io/qVcG5JV.jpg" alt="Imagen principal de Chacra de Monte" />
+              <img src="https://iili.io/qWig7f9.jpg" alt="Imagen principal de Chacra de Monte" />
             </div>
 
             <div class="floating-note">
@@ -1318,7 +1356,7 @@
               <button type="submit" class="cta">Enviar reserva por WhatsApp</button>
 
               <div class="reserve-note">
-                Cambiá el número de WhatsApp en el script por el número real del lugar para que quede funcionando.
+                Respondemos por WhatsApp para confirmar disponibilidad y coordinar la experiencia.
               </div>
             </form>
           </div>
