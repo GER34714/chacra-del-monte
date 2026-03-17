@@ -13,6 +13,12 @@
   <meta property="og:locale" content="es_AR" />
 
   <style>
+    @font-face{
+      font-family:"Anjellic";
+      src:url("./Anjellic.otf") format("opentype");
+      font-display:swap;
+    }
+
     :root{
       --bg:#f6f0e6;
       --bg-soft:#efe6d7;
@@ -87,6 +93,13 @@
       font-weight:700;
     }
 
+    .brand-script{
+      font-family:"Anjellic", cursive;
+      font-weight:400;
+      letter-spacing:.01em;
+      text-transform:none;
+    }
+
     header{
       position:sticky;
       top:0;
@@ -126,10 +139,9 @@
     }
 
     .brand-title{
-      font-size:1.02rem;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+      font-size:2rem;
+      line-height:1;
+      color:#5e3e29;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -141,6 +153,7 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      margin-top:4px;
     }
 
     .nav-links{
@@ -282,15 +295,13 @@
       align-items:center;
       gap:10px;
       margin-bottom:14px;
-      padding:10px 16px;
+      padding:12px 18px;
       border-radius:999px;
       background:rgba(255,255,255,.72);
       border:1px solid rgba(66,47,34,.10);
       color:var(--brand);
-      font-size:.9rem;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      font-weight:700;
+      font-size:2rem;
+      line-height:1;
     }
 
     .hero-copy h1{
@@ -624,34 +635,66 @@
       padding:24px;
       box-shadow:var(--shadow);
       backdrop-filter:blur(10px);
+      text-align:left;
+    }
+
+    .review-top{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:14px;
+    }
+
+    .review-avatar{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      overflow:hidden;
+      flex:0 0 auto;
+      border:3px solid rgba(255,255,255,.85);
+      box-shadow:0 10px 20px rgba(55,35,20,.12);
+      background:#e8dccd;
+    }
+
+    .review-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .review-meta{
+      min-width:0;
+    }
+
+    .review-meta strong{
+      display:block;
+      font-size:1rem;
+      color:#241a13;
+      line-height:1.2;
+    }
+
+    .review-meta small{
+      display:block;
+      margin-top:4px;
+      color:#5a493c;
+      font-size:.9rem;
+      font-weight:600;
+      line-height:1.3;
     }
 
     .stars{
-      margin-bottom:14px;
+      margin-bottom:12px;
       color:#b57a31;
       letter-spacing:.12em;
       font-size:1rem;
     }
 
     .review p{
-      margin:0 0 16px;
+      margin:0;
       color:#4d3d31;
       line-height:1.78;
       font-weight:500;
-    }
-
-    .review strong{
-      display:block;
-      font-size:1rem;
-      color:#241a13;
-    }
-
-    .review small{
-      display:block;
-      margin-top:4px;
-      color:#5a493c;
-      font-size:.9rem;
-      font-weight:600;
     }
 
     .reserve-section{
@@ -947,11 +990,15 @@
       }
 
       .brand-title{
-        font-size:.94rem;
+        font-size:1.55rem;
       }
 
       .brand-sub{
         font-size:.8rem;
+      }
+
+      .hero-brand{
+        font-size:1.7rem;
       }
 
       .hero-copy h1{
@@ -988,6 +1035,15 @@
         font-size:clamp(30px,9vw,46px);
       }
 
+      .review-top{
+        gap:12px;
+      }
+
+      .review-avatar{
+        width:58px;
+        height:58px;
+      }
+
       .footer-box{
         padding:18px;
       }
@@ -1002,7 +1058,7 @@
         <a href="#inicio" class="brand" aria-label="Ir al inicio">
           <img src="https://iili.io/qWhvj72.png" alt="Logo de Chacra de Monte" />
           <div class="brand-text">
-            <span class="brand-title">Chacra de Monte</span>
+            <span class="brand-title brand-script">Chacra de Monte</span>
             <span class="brand-sub">Día de campo y reservas</span>
           </div>
         </a>
@@ -1041,7 +1097,7 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <div class="hero-brand">Chacra de Monte</div>
+            <div class="hero-brand brand-script">Chacra de Monte</div>
             <h1>Una experiencia de campo para disfrutar con calma, sabor y momentos inolvidables</h1>
             <p>
               Chacra de Monte invita a vivir una jornada distinta entre naturaleza, gastronomía y experiencias pensadas para compartir.
@@ -1179,7 +1235,7 @@
             </article>
 
             <article class="photo-card tall">
-              <img src="https://iili.io/qV03FLb.jpg" alt="Asador en Chacra de Monte" />
+              <img src="https://iili.io/qWDIx6X.png" alt="Asador en Chacra de Monte" />
               <span class="photo-badge">Asador</span>
             </article>
           </div>
@@ -1256,33 +1312,54 @@
 
         <div class="reviews">
           <article class="review">
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="https://iili.io/qWZ1YAX.png" alt="Foto de Marina G." />
+              </div>
+              <div class="review-meta">
+                <strong>Marina G.</strong>
+                <small>Visita en pareja</small>
+              </div>
+            </div>
             <div class="stars">★★★★★</div>
             <p>
               Fuimos un domingo y la verdad superó lo que esperábamos. El lugar transmite mucha paz,
               la atención fue muy cálida y todo estaba muy bien organizado. Se nota que en Chacra de Monte cuidan la experiencia.
             </p>
-            <strong>Marina G.</strong>
-            <small>Visita en pareja</small>
           </article>
 
           <article class="review">
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="https://iili.io/qWZ1cts.png" alt="Foto de Federico R." />
+              </div>
+              <div class="review-meta">
+                <strong>Federico R.</strong>
+                <small>Salida en familia</small>
+              </div>
+            </div>
             <div class="stars">★★★★★</div>
             <p>
               Nos encantó el día de campo. La comida estuvo muy bien y el ambiente se sintió natural, tranquilo y familiar.
               Ideal para cortar la rutina y pasar un día distinto con una propuesta bien cuidada.
             </p>
-            <strong>Federico R.</strong>
-            <small>Salida en familia</small>
           </article>
 
           <article class="review">
+            <div class="review-top">
+              <div class="review-avatar">
+                <img src="https://iili.io/qWZ10oG.png" alt="Foto de Lucía M." />
+              </div>
+              <div class="review-meta">
+                <strong>Lucía M.</strong>
+                <small>Experiencia especial</small>
+              </div>
+            </div>
             <div class="stars">★★★★★</div>
             <p>
               Reservamos porque queríamos hacer algo especial y fue una muy buena elección.
               El paseo en globo le dio un plus hermoso a toda la jornada. Muy recomendable para regalar o compartir.
             </p>
-            <strong>Lucía M.</strong>
-            <small>Experiencia especial</small>
           </article>
         </div>
       </div>
@@ -1296,7 +1373,7 @@
           <div class="reserve-overlay">
             <div class="reserve-copy">
               <span class="eyebrow">Reservá tu experiencia</span>
-              <h2>Viví Chacra de Monte con una reserva simple y directa</h2>
+              <h2>Viví <span class="brand-script">Chacra de Monte</span> con una reserva simple y directa</h2>
               <p>
                 Elegí la fecha, la cantidad de personas y la experiencia que querés disfrutar. Desde ahí podés continuar por WhatsApp para consultar disponibilidad y avanzar con tu reserva.
               </p>
@@ -1368,7 +1445,7 @@
   <footer>
     <div class="container">
       <div class="footer-box">
-        <p>Chacra de Monte · Día de campo, gastronomía y experiencias especiales con reservas claras.</p>
+        <p><span class="brand-script" style="font-size:1.35rem;color:#5e3e29;">Chacra de Monte</span> · Día de campo, gastronomía y experiencias especiales con reservas claras.</p>
         <p>Creado y diseñado por <a href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Ciborg 347</a></p>
       </div>
     </div>
