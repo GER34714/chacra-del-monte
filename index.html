@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estancia de Campo | Reservas</title>
-  <meta name="description" content="Viví una experiencia de campo con día de campo, parrilla libre, menú destacado y paseo en globo. Reservas simples y claras por WhatsApp." />
+  <title>Chacra de Monte | Día de campo y reservas</title>
+  <meta name="description" content="Viví Chacra de Monte con día de campo, parrilla libre, menú destacado y paseo en globo. Reservas simples y claras por WhatsApp." />
 
-  <meta property="og:title" content="Estancia de Campo | Reservas" />
-  <meta property="og:description" content="Día de campo, parrilla libre, menú destacado y experiencia en globo. Reservá tu lugar de forma simple." />
+  <meta property="og:title" content="Chacra de Monte | Día de campo y reservas" />
+  <meta property="og:description" content="Día de campo, parrilla libre, menú destacado y experiencia en globo. Reservá tu lugar en Chacra de Monte." />
   <meta property="og:image" content="https://iili.io/qVcG5JV.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_AR" />
@@ -26,9 +26,6 @@
       --accent:#c58f4d;
       --accent-soft:#e6c59a;
       --shadow:0 18px 45px rgba(55,35,20,.12);
-      --radius-xl:28px;
-      --radius-lg:22px;
-      --radius-md:18px;
       --max:1180px;
       --header-h:84px;
     }
@@ -71,7 +68,7 @@
       color:var(--muted);
       font-size:1.04rem;
       line-height:1.7;
-      max-width:720px;
+      max-width:760px;
     }
 
     .eyebrow{
@@ -127,9 +124,10 @@
     }
 
     .brand-title{
-      font-size:1rem;
+      font-size:1.02rem;
       font-weight:700;
-      letter-spacing:.03em;
+      letter-spacing:.08em;
+      text-transform:uppercase;
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
@@ -175,7 +173,7 @@
       color:#fff;
       font-weight:700;
       box-shadow:0 12px 26px rgba(110,77,52,.22);
-      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      transition:transform .2s ease, box-shadow .2s ease;
       cursor:pointer;
     }
 
@@ -272,14 +270,30 @@
       padding:34px;
       box-shadow:var(--shadow);
       backdrop-filter:blur(10px);
-      max-width:640px;
+      max-width:660px;
+    }
+
+    .hero-brand{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:14px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.62);
+      border:1px solid rgba(66,47,34,.08);
+      color:var(--brand);
+      font-size:.9rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      font-weight:700;
     }
 
     .hero-copy h1{
       margin:0 0 16px;
-      font-size:clamp(38px,6vw,68px);
-      line-height:.98;
-      letter-spacing:-.04em;
+      font-size:clamp(40px,6vw,72px);
+      line-height:.97;
+      letter-spacing:-.045em;
     }
 
     .hero-copy p{
@@ -287,7 +301,7 @@
       color:var(--muted);
       font-size:1.06rem;
       line-height:1.8;
-      max-width:560px;
+      max-width:580px;
     }
 
     .hero-actions{
@@ -339,7 +353,7 @@
       position:absolute;
       left:20px;
       bottom:20px;
-      max-width:260px;
+      max-width:290px;
       padding:16px 18px;
       border-radius:20px;
       background:rgba(255,250,244,.78);
@@ -526,6 +540,7 @@
       align-items:center;
       gap:10px;
       color:var(--text);
+      line-height:1.65;
     }
 
     .globo-wrap{
@@ -649,7 +664,7 @@
       gap:24px;
       align-items:center;
       padding:34px;
-      background:linear-gradient(90deg, rgba(34,24,17,.42) 0%, rgba(34,24,17,.26) 40%, rgba(34,24,17,.18) 100%);
+      background:linear-gradient(90deg, rgba(34,24,17,.34) 0%, rgba(34,24,17,.20) 42%, rgba(34,24,17,.16) 100%);
     }
 
     .reserve-copy{
@@ -672,7 +687,7 @@
 
     .reserve-copy p{
       margin:0 0 22px;
-      color:rgba(255,245,234,.88);
+      color:rgba(255,245,234,.9);
       line-height:1.8;
       max-width:560px;
     }
@@ -894,7 +909,7 @@
       }
 
       .brand-title{
-        font-size:.95rem;
+        font-size:.94rem;
       }
 
       .brand-sub{
@@ -947,10 +962,10 @@
     <div class="container">
       <div class="nav">
         <a href="#inicio" class="brand" aria-label="Ir al inicio">
-          <img src="https://iili.io/qWhvj72.png" alt="Logo de la estancia" />
+          <img src="https://iili.io/qWhvj72.png" alt="Logo de Chacra de Monte" />
           <div class="brand-text">
-            <span class="brand-title">Estancia de Campo</span>
-            <span class="brand-sub">Reservas y experiencias</span>
+            <span class="brand-title">Chacra de Monte</span>
+            <span class="brand-sub">Día de campo y reservas</span>
           </div>
         </a>
 
@@ -988,35 +1003,34 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">Una pausa distinta</span>
-            <h1>Campo, sabores y una experiencia para disfrutar sin apuro</h1>
+            <div class="hero-brand">Chacra de Monte</div>
+            <h1>Una experiencia de campo para disfrutar con calma, sabor y momentos inolvidables</h1>
             <p>
-              Un lugar para desconectar, compartir un gran día de campo, disfrutar de la parrilla,
-              conocer el menú de la estancia y sumar, si querés, una experiencia en globo
-              que vuelve la jornada todavía más especial.
+              Chacra de Monte invita a vivir una jornada distinta entre naturaleza, gastronomía y experiencias pensadas para compartir.
+              Un lugar donde el día de campo, la parrilla y el paseo en globo se unen en una propuesta cálida y especial.
             </p>
 
             <div class="hero-actions">
               <a class="cta" href="#reservas">Reservar experiencia</a>
-              <a class="cta secondary" href="#menu">Ver menú destacado</a>
+              <a class="cta secondary" href="#menu">Ver menú</a>
             </div>
 
             <div class="hero-bullets">
               <span>Día de campo</span>
               <span>Parrilla libre</span>
               <span>Menú destacado</span>
-              <span>Experiencia en globo</span>
+              <span>Paseo en globo</span>
             </div>
           </div>
 
           <div class="hero-media">
             <div class="hero-image-wrap">
-              <img src="https://iili.io/qVcG5JV.jpg" alt="Imagen principal de la estancia" />
+              <img src="https://iili.io/qVcG5JV.jpg" alt="Imagen principal de Chacra de Monte" />
             </div>
 
             <div class="floating-note">
               <strong>Reservas simples y claras</strong>
-              <span>Elegí fecha, cantidad de personas y el tipo de experiencia. Te respondemos por WhatsApp para confirmar.</span>
+              <span>Elegí fecha, cantidad de personas y el tipo de experiencia para consultar disponibilidad por WhatsApp.</span>
             </div>
           </div>
         </div>
@@ -1027,16 +1041,16 @@
       <div class="container">
         <div class="intro-wrap">
           <div class="soft-card">
-            <h3>Un entorno que invita a quedarse</h3>
-            <p>Una propuesta pensada para quienes buscan naturaleza, buena atención y una experiencia tranquila en un entorno cuidado.</p>
+            <h3>Naturaleza y descanso</h3>
+            <p>Un entorno sereno para desconectar de la rutina y disfrutar de una jornada en contacto con el aire libre.</p>
           </div>
           <div class="soft-card">
-            <h3>Sabores que acompañan la jornada</h3>
-            <p>Parrilla, menú y momentos para compartir con calma, sin una web recargada ni una experiencia apurada.</p>
+            <h3>Sabores para compartir</h3>
+            <p>Parrilla, menú y momentos alrededor de la mesa para vivir una experiencia cálida y bien atendida.</p>
           </div>
           <div class="soft-card">
-            <h3>Opciones para un día especial</h3>
-            <p>Día de campo, propuestas gastronómicas y la posibilidad de sumar una vivencia en globo para hacerla inolvidable.</p>
+            <h3>Momentos que quedan</h3>
+            <p>Una propuesta ideal para parejas, familias, amigos y quienes buscan regalarse un día realmente especial.</p>
           </div>
         </div>
       </div>
@@ -1044,49 +1058,46 @@
 
     <section class="section" id="experiencia">
       <div class="container">
-        <span class="eyebrow">Experiencia de campo</span>
-        <h2 class="section-title">Una jornada para conectar con lo simple y disfrutar de verdad</h2>
+        <span class="eyebrow">Chacra de Monte</span>
+        <h2 class="section-title">Un día de campo pensado para disfrutar desde que llegás</h2>
         <p class="section-sub">
-          Seleccionamos pocas imágenes para mostrar lo esencial: el clima del lugar, el día de campo y la experiencia general,
-          sin saturar la web ni convertirla en una galería interminable.
+          Cada rincón de Chacra de Monte acompaña una experiencia donde la tranquilidad, la buena atención y el entorno natural se sienten de manera auténtica.
         </p>
 
         <div class="experience-grid" style="margin-top:28px;">
           <div class="image-combo">
             <article class="photo-card tall">
-              <img src="https://iili.io/qWNINA7.jpg" alt="Día de campo en la estancia" />
+              <img src="https://iili.io/qWNINA7.jpg" alt="Día de campo en Chacra de Monte" />
               <span class="photo-badge">Día de campo</span>
             </article>
 
             <article class="photo-card mid">
-              <img src="https://iili.io/qWNIWF4.jpg" alt="Momento de relax en la estancia" />
-              <span class="photo-badge">Naturaleza y descanso</span>
+              <img src="https://iili.io/qWNIWF4.jpg" alt="Naturaleza y relax en Chacra de Monte" />
+              <span class="photo-badge">Naturaleza y relax</span>
             </article>
           </div>
 
           <div class="copy-panel">
-            <h2>Una escapada cálida, cuidada y con personalidad propia</h2>
+            <h2>Una escapada cálida, natural y llena de buenos momentos</h2>
             <p>
-              La propuesta combina aire libre, momentos para compartir, buena gastronomía y un entorno que transmite calma desde que llegás.
-              Todo está pensado para que la reserva sea clara y la experiencia se sienta especial desde el primer contacto.
+              Chacra de Monte ofrece el clima ideal para compartir una salida distinta, rodeada de verde, aire libre y una atmósfera que invita a bajar un cambio.
             </p>
             <p>
-              Ya sea para una salida en pareja, una jornada en familia o una experiencia distinta con amigos,
-              el lugar invita a bajar un cambio y disfrutar sin vueltas.
+              Ya sea para una jornada en pareja, en familia o con amigos, la propuesta combina tranquilidad, sabores de campo y experiencias que hacen que cada visita se sienta única.
             </p>
 
             <div class="feature-list">
               <div class="feature-item">
                 <span class="dot"></span>
-                <div>Ambiente sereno, natural y visualmente cuidado.</div>
+                <div>Un entorno cuidado para disfrutar sin apuro.</div>
               </div>
               <div class="feature-item">
                 <span class="dot"></span>
-                <div>Experiencias que combinan campo, gastronomía y momentos memorables.</div>
+                <div>Una propuesta ideal para compartir y crear recuerdos.</div>
               </div>
               <div class="feature-item">
                 <span class="dot"></span>
-                <div>Proceso de reserva simple para organizar tu visita con claridad.</div>
+                <div>Reservas simples para organizar tu visita con claridad.</div>
               </div>
             </div>
           </div>
@@ -1099,40 +1110,38 @@
         <span class="eyebrow">Asador y parrilla libre</span>
         <div class="experience-grid" style="margin-top:4px;">
           <div class="copy-panel">
-            <h2>Sabores de campo que acompañan toda la experiencia</h2>
+            <h2>Sabores de campo que acompañan toda la jornada</h2>
             <p>
-              La gastronomía también tiene protagonismo. La parrilla, el asador y la propuesta general del día
-              están pensados para que la comida sea parte del recuerdo y no solo un detalle más.
+              La gastronomía es una parte esencial de la experiencia en Chacra de Monte. La parrilla libre y el asador acompañan el día con ese clima de encuentro que transforma una salida en un recuerdo compartido.
             </p>
             <p>
-              Elegimos pocas imágenes y bien ubicadas para mostrar esta parte con fuerza,
-              sin caer en una web pesada ni estructurada de más.
+              Cada detalle está pensado para que la comida también tenga su protagonismo y sume valor a una jornada que se disfruta con tiempo.
             </p>
 
             <div class="feature-list">
               <div class="feature-item">
                 <span class="dot"></span>
-                <div>Parrilla libre y clima de encuentro.</div>
+                <div>Parrilla libre para disfrutar en un ambiente relajado.</div>
               </div>
               <div class="feature-item">
                 <span class="dot"></span>
-                <div>Una propuesta ideal para compartir con tiempo.</div>
+                <div>Sabores que acompañan el espíritu cálido del lugar.</div>
               </div>
               <div class="feature-item">
                 <span class="dot"></span>
-                <div>Comida que acompaña el espíritu de la estancia.</div>
+                <div>Una propuesta ideal para compartir en buena compañía.</div>
               </div>
             </div>
           </div>
 
           <div class="image-combo">
             <article class="photo-card mid">
-              <img src="https://iili.io/qV02mrl.jpg" alt="Parrilla libre de la estancia" />
+              <img src="https://iili.io/qV02mrl.jpg" alt="Parrilla libre en Chacra de Monte" />
               <span class="photo-badge">Parrilla libre</span>
             </article>
 
             <article class="photo-card tall">
-              <img src="https://iili.io/qV03FLb.jpg" alt="Asador de la estancia" />
+              <img src="https://iili.io/qV03FLb.jpg" alt="Asador en Chacra de Monte" />
               <span class="photo-badge">Asador</span>
             </article>
           </div>
@@ -1146,25 +1155,23 @@
 
         <div class="menu-highlight" style="margin-top:10px;">
           <article class="photo-card menu-photo">
-            <img src="https://iili.io/qWNSe3u.jpg" alt="Menú destacado de la estancia" />
-            <span class="photo-badge">Menú del día</span>
+            <img src="https://iili.io/qWNSe3u.jpg" alt="Menú destacado de Chacra de Monte" />
+            <span class="photo-badge">Menú</span>
           </article>
 
           <div class="menu-copy">
-            <h2>Una propuesta gastronómica clara y protagonista</h2>
+            <h2>Una propuesta gastronómica que acompaña el espíritu del lugar</h2>
             <p>
-              Esta sección está pensada para destacar el menú sin mezclarlo con otras fotos.
-              La idea es que se vea importante, ordenado y fácil de identificar dentro del recorrido de la web.
+              En Chacra de Monte, el menú forma parte de la experiencia. Sabores de campo, momentos alrededor de la mesa y una atención pensada para que cada comida se viva con la misma calma y calidez que transmite el entorno.
             </p>
             <p>
-              Podés usar este bloque para presentar el menú vigente, opciones especiales,
-              experiencias gastronómicas incluidas o detalles para quienes quieran reservar con anticipación.
+              La propuesta gastronómica acompaña la jornada con opciones ideales para compartir, disfrutar y sumar valor a una salida distinta en plena naturaleza.
             </p>
 
             <div class="menu-points">
-              <span><strong>•</strong> Menú visible y bien ubicado dentro de la experiencia.</span>
-              <span><strong>•</strong> Ideal para reforzar valor y ayudar a decidir la reserva.</span>
-              <span><strong>•</strong> Perfecto para acompañar el cierre comercial del sitio.</span>
+              <span><strong>•</strong> Sabores que se integran a la experiencia del día de campo.</span>
+              <span><strong>•</strong> Una propuesta ideal para disfrutar con tiempo y buena compañía.</span>
+              <span><strong>•</strong> El complemento perfecto para una jornada especial en Chacra de Monte.</span>
             </div>
 
             <a class="cta" href="#reservas">Consultar disponibilidad</a>
@@ -1175,26 +1182,26 @@
 
     <section class="section" id="globo">
       <div class="container">
-        <span class="eyebrow">Experiencia especial</span>
-        <h2 class="section-title">El paseo en globo como broche distinto para una jornada inolvidable</h2>
+        <span class="eyebrow">Experiencia en globo</span>
+        <h2 class="section-title">Una forma única de vivir el paisaje y hacer todavía más especial la jornada</h2>
         <p class="section-sub">
-          Un diferencial fuerte dentro de la propuesta. Lo separamos del resto para que tenga identidad propia y se sienta como una experiencia premium dentro del sitio.
+          El paseo en globo suma una vivencia inolvidable para quienes buscan transformar su visita en un recuerdo distinto, emocionante y verdaderamente especial.
         </p>
 
         <div class="globo-wrap">
           <article class="globo-card">
-            <img src="https://iili.io/qVl4Lxe.jpg" alt="Experiencia en globo aerostático" />
+            <img src="https://iili.io/qVl4Lxe.jpg" alt="Experiencia en globo aerostático en Chacra de Monte" />
             <div class="globo-label">
-              <strong>Una vista distinta, un momento único</strong>
-              <span>Ideal para quienes buscan sumar algo memorable a su visita y vivir el campo desde otra perspectiva.</span>
+              <strong>Una vista distinta del campo</strong>
+              <span>El paisaje, el cielo abierto y la sensación de vivir un momento fuera de lo cotidiano.</span>
             </div>
           </article>
 
           <article class="globo-card">
-            <img src="https://iili.io/qWwpZnn.jpg" alt="Paseo en globo en la estancia" />
+            <img src="https://iili.io/qWwpZnn.jpg" alt="Paseo en globo en Chacra de Monte" />
             <div class="globo-label">
-              <strong>Una experiencia que eleva la jornada</strong>
-              <span>Perfecta para ocasiones especiales, escapadas distintas y reservas con un toque premium.</span>
+              <strong>Un recuerdo para guardar</strong>
+              <span>Ideal para ocasiones especiales, escapadas románticas o una experiencia que merezca ser recordada.</span>
             </div>
           </article>
         </div>
@@ -1204,9 +1211,9 @@
     <section class="section" id="resenas">
       <div class="container">
         <span class="eyebrow">Reseñas</span>
-        <h2 class="section-title">Comentarios que transmiten la calidez del lugar</h2>
+        <h2 class="section-title">Lo que se vive en Chacra de Monte se siente en cada visita</h2>
         <p class="section-sub">
-          Sumamos reseñas cálidas y creíbles para reforzar confianza, acompañar la decisión y darle humanidad al recorrido.
+          Quienes llegan al lugar destacan la tranquilidad, la atención y el clima especial que acompaña toda la experiencia.
         </p>
 
         <div class="reviews">
@@ -1214,7 +1221,7 @@
             <div class="stars">★★★★★</div>
             <p>
               Fuimos un domingo y la verdad superó lo que esperábamos. El lugar transmite mucha paz,
-              la atención fue muy cálida y todo estaba muy bien organizado. Se nota que cuidan la experiencia.
+              la atención fue muy cálida y todo estaba muy bien organizado. Se nota que en Chacra de Monte cuidan la experiencia.
             </p>
             <strong>Marina G.</strong>
             <small>Visita en pareja</small>
@@ -1224,7 +1231,7 @@
             <div class="stars">★★★★★</div>
             <p>
               Nos encantó el día de campo. La comida estuvo muy bien y el ambiente se sintió natural, tranquilo y familiar.
-              Ideal para cortar la rutina y pasar un día distinto sin irse lejos de lo simple.
+              Ideal para cortar la rutina y pasar un día distinto con una propuesta bien cuidada.
             </p>
             <strong>Federico R.</strong>
             <small>Salida en familia</small>
@@ -1246,24 +1253,23 @@
     <section class="section reserve-section" id="reservas">
       <div class="container">
         <div class="reserve-shell">
-          <img src="https://iili.io/qVlhMpR.jpg" alt="Imagen final de experiencia en globo" />
+          <img src="https://iili.io/qW8NHtp.jpg" alt="Reservas en Chacra de Monte" />
 
           <div class="reserve-overlay">
             <div class="reserve-copy">
-              <span class="eyebrow">Reservá tu lugar</span>
-              <h2>Una reserva clara para una experiencia que vale la pena vivir</h2>
+              <span class="eyebrow">Reservá tu experiencia</span>
+              <h2>Viví Chacra de Monte con una reserva simple y directa</h2>
               <p>
-                Elegí la experiencia, indicá la cantidad de personas y dejá tus datos.
-                El sistema arma el mensaje y te lleva directo a WhatsApp para continuar la confirmación de forma simple.
+                Elegí la fecha, la cantidad de personas y la experiencia que querés disfrutar. Desde ahí podés continuar por WhatsApp para consultar disponibilidad y avanzar con tu reserva.
               </p>
               <p>
-                Así evitamos pasos de más y mantenemos el proceso ordenado, humano y fácil de entender.
+                Un proceso claro para que organizar tu visita sea tan simple como disfrutarla.
               </p>
             </div>
 
             <form class="reserve-form" id="reserveForm">
               <h3>Solicitud de reserva</h3>
-              <p>Completá estos datos y continuá por WhatsApp.</p>
+              <p>Completá tus datos y continuá la consulta por WhatsApp.</p>
 
               <div class="field">
                 <label for="nombre">Nombre</label>
@@ -1324,7 +1330,7 @@
   <footer>
     <div class="container">
       <div class="footer-box">
-        <p>Estancia de Campo · Día de campo, gastronomía y experiencias especiales con reservas claras.</p>
+        <p>Chacra de Monte · Día de campo, gastronomía y experiencias especiales con reservas claras.</p>
         <p>Creado y diseñado por <a href="https://ciborg347oficial.onrender.com" target="_blank" rel="noopener noreferrer">Ciborg 347</a></p>
       </div>
     </div>
@@ -1364,7 +1370,7 @@
       const mensaje = document.getElementById("mensaje").value.trim();
 
       const texto =
-`Hola, quiero consultar una reserva.
+`Hola, quiero consultar una reserva en Chacra de Monte.
 Nombre: ${nombre}
 Telefono: ${telefono}
 Fecha deseada: ${fecha}
